@@ -1,0 +1,94 @@
+/* Background settings for the Competitions section */
+.competitions-bg {
+    background-image: url('./assets/services/service-3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* Techy frame styling */
+.tech-frame-alt {
+    padding: 20px;
+    border: 2px solid #c715c4;
+    border-radius: 15px;
+    background: rgba(20, 20, 20, 0.8);
+    box-shadow: 0 0 20px #c715c4, 0 0 40px #c715c4;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Section title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 20px #c715c4, 0 0 40px #c715c4;
+    margin-bottom: 30px;
+    animation: pulse-title 3s infinite;
+  }
+
+/* Glow card styling */
+.glow-card {
+    background: rgba(20, 20, 20, 0.7);
+    border: 2px solid rgba(199, 21, 196, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 0 15px rgba(116, 30, 222, 0.8), 0 0 30px rgba(116, 30, 222, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 300px;
+}
+
+.glow-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(199, 21, 196, 0.8), 0 0 50px rgba(199, 21, 196, 0.6);
+}
+
+/* Image area of the card */
+.card-image {
+    flex-grow: 1;
+    width: 100%;
+    background-color: #741ede;
+}
+
+/* Title text at the bottom of the card */
+.card-title {
+    background: rgba(20, 20, 20, 0.9);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    width: 100%;
+    box-shadow: 0 0 10px #c715c4;
+}
+
+/* Alternate glowing border effect for the frame */
+.tech-frame-alt:before, .tech-frame-alt:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(45deg, transparent, rgba(250, 33, 250, 0.6), transparent);
+    animation: frame-fade-alt 3s infinite alternate;
+}
+
+@keyframes frame-fade-alt {
+    from {
+        transform: translateX(100%) translateY(-100%);
+    }
+    to {
+        transform: translateX(-100%) translateY(100%);
+    }
+}
+

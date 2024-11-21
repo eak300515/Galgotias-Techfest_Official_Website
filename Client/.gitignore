@@ -1,0 +1,60 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+client/node_modules/
+server/node_modules/
+
+# Build outputs
+client/dist/
+client/dist-ssr/
+server/build/
+server/dist/
+
+# Environment files
+*.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+Thumbs.db
+ehthumbs.db
+
+# Mac system files
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.log.*
+*.pid
+*.seed
+*.cover
+
+# Misc
+node_modules/
+coverage/
