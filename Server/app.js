@@ -13,7 +13,7 @@ mongoose
   .catch((err) => console.error("MongoDB Connection Failed:", err));
 
 const registrationRoutes = require("./routes/registration");
-app.use("/api/registrations", registrationRoutes);
+app.use("https://galgotias-techfest-official-website.vercel.app/api/registrations", registrationRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
