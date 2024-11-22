@@ -1,60 +1,63 @@
+# Node.js dependencies
+node_modules/
+Client/node_modules/
+Server/node_modules/
+
+# Environment variables
+.env
+Client/.env
+Server/.env
+
+# Build files
+build/
+dist/
+Client/build/
+Client/dist/
+Server/build/
+Server/dist/
+
 # Logs
-logs
 *.log
+logs/
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependency directories
-client/node_modules/
-server/node_modules/
-
-# Build outputs
-client/dist/
-client/dist-ssr/
-server/build/
-server/dist/
-
-# Environment files
-*.env
-.env.*
-.env.local
-.env.development
-.env.test
-.env.production
-
-# Editor directories and files
-.vscode/
-!.vscode/extensions.json
-.idea/
+# OS-specific files
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# OS files
 Thumbs.db
-ehthumbs.db
 
-# Mac system files
-.AppleDouble
-.LSOverride
+# Editor-specific files
+.vscode/
+.idea/
+*.code-workspace
 
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.swp
-*.swo
-*.log.*
-*.pid
-*.seed
-*.cover
-
-# Misc
-node_modules/
+# Testing and coverage
 coverage/
+Client/coverage/
+Server/coverage/
+
+# Cache and temporary files
+*.swp
+*.tmp
+*.bak
+*.old
+.tmp/
+.cache/
+Client/.cache/
+Server/.cache/
+
+# Lint and debug files
+.eslintcache
+Client/.eslintcache
+Server/.eslintcache
+
+# Frontend-specific
+Client/.next/
+Client/.nuxt/
+Client/.angular/
+
+# Miscellaneous
+*.log
+*.lock

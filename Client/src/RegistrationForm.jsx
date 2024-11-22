@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "aos/dist/aos.css"; // Import AOS styles
 import AOS from "aos"; // Import AOS
 
@@ -6,6 +6,79 @@ const RegistrationForm = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  // State to manage form data
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    address: "",
+    fieldOfInterest: "",
+    workshop: "",
+    competitions: "",
+    accommodation: "",
+  });
+
+  // State to handle form errors
+  const [errors, setErrors] = useState({});
+
+  // Handle form field changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Form validation
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.firstName) newErrors.firstName = "First Name is required.";
+    if (!formData.lastName) newErrors.lastName = "Last Name is required.";
+    if (!formData.email) newErrors.email = "Email is required.";
+    if (!formData.phone) newErrors.phone = "Phone number is required.";
+    if (!formData.address) newErrors.address = "Address is required.";
+    if (!formData.fieldOfInterest) newErrors.fieldOfInterest = "Field of Interest is required.";
+    if (!formData.workshop) newErrors.workshop = "Workshop selection is required.";
+    if (!formData.competitions) newErrors.competitions = "Competitions selection is required.";
+    if (!formData.accommodation) newErrors.accommodation = "Accommodation selection is required.";
+
+    return newErrors;
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validate form
+    const validationErrors = validateForm();
+    setErrors(validationErrors);
+
+    // If no errors, send data to backend
+    if (Object.keys(validationErrors).length === 0) {
+      try {
+        const response = await fetch("http://localhost:5000/api/registrations", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          // Success message or redirect
+          alert("Registration Successful!");
+        } else {
+          alert("Registration failed. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred. Please try again.");
+      }
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-black to-purple-800 p-6">
@@ -30,7 +103,7 @@ const RegistrationForm = () => {
           4. Receive Invite: Get your invite to the Tech Fest
         </p>
 
-        <form className="relative z-10 space-y-6">
+        <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
           {/* Personal Details */}
           <div className="space-y-4">
             <h3 className="text-purple-300 text-lg font-semibold">
@@ -46,9 +119,13 @@ const RegistrationForm = () => {
               <input
                 type="text"
                 id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
                 placeholder="Enter your First Name"
                 className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
               />
+              {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
             </div>
             <div>
               <label
@@ -60,9 +137,13 @@ const RegistrationForm = () => {
               <input
                 type="text"
                 id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
                 placeholder="Enter your Last Name"
                 className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
               />
+              {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
             </div>
             <div>
               <label
@@ -74,9 +155,13 @@ const RegistrationForm = () => {
               <input
                 type="email"
                 id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="your_email@example.com"
                 className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
               />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
             </div>
             <div>
               <label
@@ -88,9 +173,13 @@ const RegistrationForm = () => {
               <input
                 type="tel"
                 id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 placeholder="Enter Contact No."
                 className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
               />
+              {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
             </div>
             <div>
               <label
@@ -101,10 +190,14 @@ const RegistrationForm = () => {
               </label>
               <textarea
                 id="address"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
                 placeholder="Enter Your Address"
                 className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
                 rows="3"
               ></textarea>
+              {errors.address && <p className="text-red-500 text-sm">{errors.address}</p>}
             </div>
           </div>
 
@@ -122,15 +215,19 @@ const RegistrationForm = () => {
               </label>
               <select
                 id="fieldOfInterest"
+                name="fieldOfInterest"
+                value={formData.fieldOfInterest}
+                onChange={handleChange}
                 className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
               >
-                <option>Select Interest</option>
+                <option value="">Select Interest</option>
                 <option>Tech</option>
                 <option>Robotics</option>
                 <option>AI</option>
                 <option>BioTech</option>
                 <option>Other</option>
               </select>
+              {errors.fieldOfInterest && <p className="text-red-500 text-sm">{errors.fieldOfInterest}</p>}
             </div>
             <div>
               <label
@@ -141,9 +238,12 @@ const RegistrationForm = () => {
               </label>
               <select
                 id="workshop"
+                name="workshop"
+                value={formData.workshop}
+                onChange={handleChange}
                 className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
               >
-                <option>Select Workshop</option>
+                <option value="">Select Workshop</option>
                 <option>AIML Workshop</option>
                 <option>Web Dev Workshop</option>
                 <option>Mob Dev Workshop</option>
@@ -161,6 +261,7 @@ const RegistrationForm = () => {
                 <option>Gene Cloning Workshop</option>
                 <option>Digital Forensics Workshop</option>
               </select>
+              {errors.workshop && <p className="text-red-500 text-sm">{errors.workshop}</p>}
             </div>
             <div>
               <label
@@ -171,9 +272,12 @@ const RegistrationForm = () => {
               </label>
               <select
                 id="competitions"
+                name="competitions"
+                value={formData.competitions}
+                onChange={handleChange}
                 className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
               >
-                <option>Select Competition</option>
+                <option value="">Select Competition</option>
                 <option>Esports Gaming Competition</option>
                 <option>Robowars-Robotics Competition</option>
                 <option>Ideates-AI & Sustainability Solutions</option>
@@ -183,6 +287,7 @@ const RegistrationForm = () => {
                 <option>DeepTech & Blockchain Competition</option>
                 <option>Virtual Trading Competition</option>
               </select>
+              {errors.competitions && <p className="text-red-500 text-sm">{errors.competitions}</p>}
             </div>
             <div>
               <label
@@ -193,11 +298,16 @@ const RegistrationForm = () => {
               </label>
               <select
                 id="accommodation"
+                name="accommodation"
+                value={formData.accommodation}
+                onChange={handleChange}
                 className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
               >
+                <option value="">Select</option>
                 <option>Yes</option>
                 <option>No</option>
               </select>
+              {errors.accommodation && <p className="text-red-500 text-sm">{errors.accommodation}</p>}
             </div>
           </div>
 
@@ -211,14 +321,14 @@ const RegistrationForm = () => {
 
           {/* Already Have Account */}
           <p
-          data-aos="fade-up"
-          className="text-center text-purple-400 mt-6 text-sm"
-        >
-          Already have an account?{" "}
-          <a href="#" className="text-purple-300 underline">
-            Login
-          </a>
-        </p>
+            data-aos="fade-up"
+            className="text-center text-purple-400 mt-6 text-sm"
+          >
+            Already have an account?{" "}
+            <a href="#" className="text-purple-300 underline">
+              Login
+            </a>
+          </p>
         </form>
       </div>
     </div>
