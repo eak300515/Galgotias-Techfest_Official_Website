@@ -18,7 +18,7 @@ const About = () => {
         <h2 className="about-title">About the Tech Fest</h2>
         <p className="about-subtitle">At Galgotias University</p>
         <p className="about-description">
-          The <b classname="bold">Galgotias University Tech Fest</b> is more than just an event; it’s a vibrant celebration of innovation, learning, and future-focused technology. Over three dynamic days, this fest brings together brilliant minds from diverse fields—technology, business, academia, and beyond—to foster collaboration, spark inspiration, and showcase advancements that shape the future.
+          The <b className="bold">Galgotias University Tech Fest</b> is more than just an event; it’s a vibrant celebration of innovation, learning, and future-focused technology. Over three dynamic days, this fest brings together brilliant minds from diverse fields—technology, business, academia, and beyond—to foster collaboration, spark inspiration, and showcase advancements that shape the future.
         </p>
         <p className="about-highlight">
           Whether you're a student, a tech enthusiast, or an industry professional, this fest is a hub for everyone passionate about making an impact through technology.

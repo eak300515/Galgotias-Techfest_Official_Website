@@ -87,7 +87,7 @@ const Header = () => {
 
         {/* Sign In Button */}
         <Button className="hidden lg:flex" href="#login" onClick={handleScrollToForm}>
-          Register
+          GUTechFest
         </Button>
 
         {/* Hamburger Menu for Mobile */}

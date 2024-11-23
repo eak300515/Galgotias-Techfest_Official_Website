@@ -23,7 +23,7 @@ const Hero = () => {
         </p>
         <ul className="hero-highlights">
           <li> A three-day immersive experience with cutting-edge tech exhibits, renowned speakers, and interactive workshops</li>
-          <li> Special events like Robotic Wars, Esports, and EDM Night</li>
+          <li> Special events like Robotic RoboWars, Esports, and EDM Night</li>
           <li> Meet and learn from tech giants like Sam Altman (OpenAI), Anupam Mittal, Narayan Murthy, and more</li>
         </ul>
         <button className="cta-button" onClick={handleScrollToForm}>Join the Fest</button>
