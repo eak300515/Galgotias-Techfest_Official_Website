@@ -4,7 +4,10 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://galgotias-techfest-official-website-frontend.vercel.app",
+  methods: ["POST"]
+}));
 app.use(express.json());
 
 mongoose
