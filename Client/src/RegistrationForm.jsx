@@ -59,7 +59,7 @@ const RegistrationForm = () => {
     // If no errors, send data to backend
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await fetch("https://ec2-16-170-234-226.eu-north-1.compute.amazonaws.com//api/registrations", {
+        const response = await fetch("https://galgotias-techfest-official-website-5rm4.onrender.com/api/registrations", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
