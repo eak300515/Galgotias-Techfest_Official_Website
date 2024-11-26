@@ -23,6 +23,9 @@ const RegistrationForm = () => {
   // State to handle form errors
   const [errors, setErrors] = useState({});
 
+  // State for success message
+  const [successMessage, setSuccessMessage] = useState("");
+
   // Handle form field changes
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -68,8 +71,24 @@ const RegistrationForm = () => {
         });
 
         if (response.ok) {
-          // Success message or redirect
-          alert("Registration Successful!");
+          // Set success message
+          setSuccessMessage("Registration Successful!");
+          
+          // Clear the success message after 3 seconds
+          setTimeout(() => setSuccessMessage(""), 3000);
+
+          // Optionally, you can reset the form:
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            address: "",
+            fieldOfInterest: "",
+            workshop: "",
+            competitions: "",
+            accommodation: "",
+          });
         } else {
           alert("Registration failed. Please try again.");
         }
@@ -127,6 +146,7 @@ const RegistrationForm = () => {
               />
               {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
             </div>
+            {/* Repeat for other fields as shown below */}
             <div>
               <label
                 htmlFor="lastName"
@@ -318,6 +338,13 @@ const RegistrationForm = () => {
           >
             Submit Registration
           </button>
+
+          {/* Success message */}
+          {successMessage && (
+            <div className="mt-4 p-2 text-center text-green-700 bg-green-100 border border-green-300 rounded-md">
+              {successMessage}
+            </div>
+          )}
 
           {/* Already Have Account */}
           <p
