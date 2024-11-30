@@ -2,101 +2,98 @@
 .about-section {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(20, 20, 20, 0.8), rgba(40, 40, 40, 0.8));
-  border-radius: 30px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  padding: 0 50px;
 }
 
-/* Background Image */
-.about-background {
+/* Glassmorphic Card */
+.about-card {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  z-index: 2;
+}
+
+/* Title and Subtitle */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.about-title::before {
+  content: "About the Tech Fest";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.about-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
-  animation: fadeInImage 2s ease-out;
-}
-
-/* Text Overlay */
-.about-overlay {
-  position: relative;
-  z-index: 2;
-  color: #ffffff;
-  text-align: center;
-  max-width: 800px;
-}
-
-.about-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-  background: linear-gradient(to right, #ff007f, #ff7b7b);
-  background-clip: text;
+  background: linear-gradient(to right, #9b59b6, #8e44ad);
+  background-clip: border-box;
   color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
 }
 
 .about-subtitle {
   font-size: 1.5rem;
-  margin-bottom: 20px;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 30px;
 }
 
+/* Description Text */
 .about-description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .highlight {
-  color: #ff7b7b;
+  color: #f1c40f;
   font-weight: bold;
 }
 
 .about-highlight {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 20px;
   color: rgba(255, 215, 0, 1);
+  margin-top: 20px;
 }
 
-/* Animations */
-@keyframes fadeInImage {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.5;
-  }
+/* Background Elements */
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(155, 89, 182, 0.3), transparent);
+  transform: rotate(-45deg);
+  animation: backgroundPulse 10s infinite alternate;
+  z-index: 1;
 }
 
-.ripple {
-  display: inline-block;
-  position: relative;
-  animation: rippleEffect 3s infinite;
-}
-
-@keyframes rippleEffect {
-  0%, 100% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+@keyframes backgroundPulse {
+  0% {
+    opacity: 0.6;
   }
-  50% {
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+  100% {
+    opacity: 0.3;
   }
 }
