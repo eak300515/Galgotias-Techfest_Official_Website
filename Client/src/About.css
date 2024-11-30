@@ -1,4 +1,4 @@
-/* Full-Screen Background with Image */
+/* Full-Screen Background */
 .techfest-container {
   position: relative;
   width: 100%;
@@ -11,36 +11,52 @@
   overflow: hidden;
 }
 
-/* Content Wrapper */
-.techfest-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
+/* Card Wrapper */
+.techfest-card {
   position: relative;
-  z-index: 2;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Floating Ripple Effect for Text */
+.techfest-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Image Section */
+.techfest-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Text Over Image */
 .techfest-text {
-  flex: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #ffffff;
-  text-align: left;
+  text-align: center;
   animation: ripple 5s infinite ease-in-out;
+  padding: 1rem;
 }
 
 .techfest-text h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-family: "Playfair Display", serif;
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .techfest-text p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.5;
   font-family: "Roboto", sans-serif;
   color: #f0f0f0;
 }
@@ -49,50 +65,24 @@
 @keyframes ripple {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translate(-50%, -55%);
   }
-}
-
-/* Image Styling */
-.techfest-image {
-  flex: 1;
-  position: relative;
-}
-
-.techfest-image img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: transform 0.5s ease, filter 0.5s ease;
-}
-
-/* Image Hover Effect */
-.techfest-image img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.2);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .techfest-content {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .techfest-text {
-    text-align: center;
+  .techfest-card {
+    width: 90%;
   }
 
   .techfest-text h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .techfest-text p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

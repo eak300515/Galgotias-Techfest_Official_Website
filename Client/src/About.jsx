@@ -4,8 +4,13 @@ import "./About.css";
 const About = () => {
   return (
     <section className="techfest-container">
-      {/* Main Content */}
-      <div className="techfest-content">
+      <div className="techfest-card">
+        <div className="techfest-image">
+          <img
+            src="/src/assets/services/service-2.png"
+            alt="Galgotias Tech Fest"
+          />
+        </div>
         <div className="techfest-text">
           <h2>About the Tech Fest</h2>
           <p>
@@ -18,12 +23,6 @@ const About = () => {
             enthusiast, or an industry professional, this fest is a hub for everyone
             passionate about making an impact through technology.
           </p>
-        </div>
-        <div className="techfest-image">
-          <img
-            src="/src/assets/services/service-2.png"
-            alt="Galgotias Tech Fest"
-          />
         </div>
       </div>
     </section>
