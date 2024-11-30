@@ -87,21 +87,22 @@ const workshops = [
 
 function Workshops() {
     return (
-        <section className="bg py-16 text-white">
+        <section className="workshops-section py-16">
             <div className="container mx-auto px-4">
                 <h2 className="section-title text-center mb-12">Workshops</h2>
                 <div className="tech-frame">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {workshops.map((workshop, index) => (
-                            <div key={index} className="workshop-card">
-                                <div 
-                                    className="workshop-card-inner" 
-                                    style={{ backgroundImage: `url(${workshop.backgroundImage})` }}
-                                >
-                                    <div className="workshop-card-overlay">
-                                        <h3 className="workshop-title">{workshop.title}</h3>
-                                        <p className="workshop-description">{workshop.description}</p>
-                                    </div>
+                            <div
+                                key={index}
+                                className="workshop-card"
+                                style={{
+                                    backgroundImage: `url(${workshop.backgroundImage})`,
+                                }}
+                            >
+                                <div className="workshop-overlay">
+                                    <h3 className="workshop-title">{workshop.title}</h3>
+                                    <p className="workshop-description">{workshop.description}</p>
                                 </div>
                             </div>
                         ))}
