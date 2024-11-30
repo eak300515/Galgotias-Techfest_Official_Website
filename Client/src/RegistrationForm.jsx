@@ -100,7 +100,13 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-black to-purple-800 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-center bg-cover p-6"
+    style={{
+      backgroundImage:
+        "url('https://source.unsplash.com/random/1920x1080/?technology')",
+    }}
+    
+    >
       <div
         data-aos="fade-up"
         className="relative w-full max-w-3xl bg-black/80 rounded-lg shadow-lg overflow-hidden p-8"
