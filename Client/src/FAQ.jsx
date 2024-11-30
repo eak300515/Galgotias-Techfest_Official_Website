@@ -27,7 +27,12 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-black to-purple-800 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-center bg-cover p-6"
+    style={{
+      backgroundImage:
+        "url('./src/assets/hero/robot.jpg')",
+    }}
+    >
       {/* Outer Glow Background */}
 
       <div className="w-full max-w-3xl relative p-8">
