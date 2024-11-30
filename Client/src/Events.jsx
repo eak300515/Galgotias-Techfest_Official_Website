@@ -15,26 +15,20 @@ const Events = () => {
     <section className="events-bg min-h-screen flex justify-center items-center px-5">
       <div className="tech-frame-alt p-8 w-full max-w-7xl">
         <h2 className="section-title text-center">Events</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event, index) => (
-            <div key={index} className="flip-card">
-              <div className="flip-card-inner">
-                {/* Front Side */}
-                <div className="flip-card-front">
-                  <div 
-                    className="card-image"
-                    style={{
-                        backgroundImage: `url(${event.image})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                    }}
-                    ></div>
-                  <div className="card-title">{event.title}</div>
-                </div>
-                {/* Back Side */}
-                <div className="flip-card-back">
-                  <p className="card-description">{event.description}</p>
-                </div>
+            <div key={index} className="glass-card group">
+              <div
+                className="card-image"
+                style={{
+                  backgroundImage: `url(${event.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              ></div>
+              <div className="card-content">
+                <h3 className="card-title">{event.title}</h3>
+                <p className="card-description">{event.description}</p>
               </div>
             </div>
           ))}
