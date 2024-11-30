@@ -3,7 +3,10 @@ import './About.css';
 
 const About = () => {
   return (
-    <section className="about-section">
+    <section className="about-section"
+    style={{
+      backgroundImage: "url('./src/assets/services/service-2.png')",
+    }}>
       {/* Glassmorphic Card */}
       <div className="about-card">
         <h2 className="about-title">About the Tech Fest</h2>
