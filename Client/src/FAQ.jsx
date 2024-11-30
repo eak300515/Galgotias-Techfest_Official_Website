@@ -29,7 +29,6 @@ const FAQ = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-black to-purple-800 p-6">
       {/* Outer Glow Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-800 via-black to-purple-900 blur-xl opacity-40"></div>
 
       <div className="w-full max-w-3xl relative p-8">
         {/* Glass Container */}
