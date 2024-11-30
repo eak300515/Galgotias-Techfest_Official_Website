@@ -3,11 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #8c05f4, #0c0105);
+  background: linear-gradient(135deg, #2b2d42, #1e1f2f); /* Classy muted gradient */
   min-height: 100vh;
   padding: 2rem;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+  color: #e9e9e9;
+  font-family: "Roboto", sans-serif; /* Modern and professional font */
 }
 
 /* Content Wrapper */
@@ -22,30 +22,35 @@
 
 /* Text Section */
 .techfest-text h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.8rem; /* Adjusted size for elegance */
+  font-weight: 600; /* Softer weight */
   margin-bottom: 1rem;
-  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); /* Subtle text shadow */
+  color: #f5f5f5; /* Softer white for title */
+  font-family: "Playfair Display", serif; /* Stylish serif font for titles */
 }
 
 .techfest-text p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  opacity: 0.9;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #d4d4d4; /* Gentle gray for better readability */
+  font-family: "Roboto", sans-serif; /* Professional sans-serif font for body text */
   padding: 0 1rem;
+  text-align: justify; /* Classy text alignment */
 }
 
 /* Image Section */
 .techfest-image img {
   max-width: 100%;
-  border-radius: 20px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 15px; /* Slightly softer corners */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25); /* Subtle shadow for a polished look */
   transform: scale(1);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .techfest-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced hover effect */
 }
 
 /* Responsive Design */
@@ -64,10 +69,10 @@
   }
 
   .techfest-text h2 {
-    font-size: 3rem;
+    font-size: 3.5rem; /* Larger title for wider screens */
   }
 
   .techfest-text p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
