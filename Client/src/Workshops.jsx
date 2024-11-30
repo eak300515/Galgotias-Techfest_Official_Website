@@ -93,30 +93,14 @@ function Workshops() {
                 <div className="tech-frame">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {workshops.map((workshop, index) => (
-                            <div key={index} className="flip-card">
-                                <div className="flip-card-inner">
-                                    <div
-                                        className="flip-card-front"
-                                        style={{
-                                            backgroundImage: `url(${workshop.backgroundImage})`,
-                                            backgroundSize: 'cover',
-                                            backgroundPosition: 'center'
-                                        }}
-                                    >
-                                        <div className="card-title-strip">
-                                            <h3 className="text-lg font-semibold">{workshop.title}</h3>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className="flip-card-back"
-                                        style={{
-                                            backgroundImage: `url(${workshop.backgroundImage})`,
-                                            backgroundSize: 'cover',
-                                            backgroundPosition: 'center',
-                                            
-                                        }}
-                                    >
-                                        <p className="description-text">{workshop.description}</p>
+                            <div key={index} className="workshop-card">
+                                <div 
+                                    className="workshop-card-inner" 
+                                    style={{ backgroundImage: `url(${workshop.backgroundImage})` }}
+                                >
+                                    <div className="workshop-card-overlay">
+                                        <h3 className="workshop-title">{workshop.title}</h3>
+                                        <p className="workshop-description">{workshop.description}</p>
                                     </div>
                                 </div>
                             </div>
