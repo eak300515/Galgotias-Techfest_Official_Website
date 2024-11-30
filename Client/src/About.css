@@ -11,16 +11,15 @@
   overflow: hidden;
 }
 
-/* Content Wrapper with Increased Width */
+/* Content Wrapper */
 .techfest-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 95%; /* Increased from 90% to 95% */
-  max-width: 1400px; /* Adjusted for larger screens */
+  width: 90%;
+  max-width: 1200px;
   position: relative;
   z-index: 2;
-  gap: 2rem; /* Added spacing between image and text */
 }
 
 /* Floating Ripple Effect for Text */
@@ -29,7 +28,6 @@
   color: #ffffff;
   text-align: left;
   animation: ripple 5s infinite ease-in-out;
-  position: relative; /* Ensures it stays within the layout */
 }
 
 .techfest-text h2 {
