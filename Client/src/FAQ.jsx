@@ -28,55 +28,50 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-black to-purple-800 p-6">
-      <div className="relative w-full max-w-4xl p-8">
-        {/* Background Glow */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-purple-500/30 to-black/30 blur-xl rounded-3xl"></div>
+      <div className="w-full max-w-3xl">
+        {/* Header Section */}
+        <h2 className="text-center text-4xl font-extrabold text-purple-300 mb-8">
+          Frequently Asked Questions
+        </h2>
 
-        <div className="relative bg-black/40 backdrop-blur-md border border-purple-500/20 rounded-3xl shadow-xl p-8 z-10">
-          <h2
-            data-aos="zoom-in"
-            className="text-4xl font-extrabold text-purple-300 mb-8 text-center"
-          >
-            FAQs
-          </h2>
-
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="relative bg-black/50 backdrop-blur-md border border-purple-500/40 rounded-lg p-6 shadow-inner"
-              >
-                <div
-                  className="flex justify-between items-center cursor-pointer"
-                  onClick={() => toggleFAQ(index)}
+        {/* FAQ Cards */}
+        <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={index}
+              layout
+              className={`rounded-xl border ${
+                openFAQ === index ? "border-purple-500" : "border-transparent"
+              } bg-gradient-to-r from-purple-800 via-black to-purple-900 p-4 shadow-lg transition-all duration-300`}
+              whileHover={{ scale: 1.02 }}
+              onClick={() => toggleFAQ(index)}
+            >
+              <div className="flex justify-between items-center cursor-pointer">
+                <h3 className="text-lg font-semibold text-purple-300">
+                  {faq.question}
+                </h3>
+                <motion.span
+                  animate={{ rotate: openFAQ === index ? 180 : 0 }}
+                  className="text-purple-400"
                 >
-                  <h3 className="text-purple-300 text-lg font-semibold">
-                    {faq.question}
-                  </h3>
-                  <span
-                    className={`transition-transform transform ${
-                      openFAQ === index ? "rotate-180" : "rotate-0"
-                    } text-purple-400`}
-                  >
-                    ▼
-                  </span>
-                </div>
-                <AnimatePresence>
-                  {openFAQ === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.4 }}
-                      className="overflow-hidden mt-4"
-                    >
-                      <p className="text-purple-400">{faq.answer}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                  ▼
+                </motion.span>
               </div>
-            ))}
-          </div>
+              <AnimatePresence>
+                {openFAQ === index && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="mt-4"
+                  >
+                    <p className="text-purple-300">{faq.answer}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
