@@ -4,8 +4,8 @@ import './About.css';
 const About = () => {
   return (
     <section className="about-section">
-      {/* Left Side - Image */}
-      <div className="about-image-container">
+      {/* Background Image */}
+      <div className="about-background">
         <img
           src="/src/assets/services/service-2.png"
           alt="Galgotias University"
@@ -13,14 +13,14 @@ const About = () => {
         />
       </div>
 
-      {/* Right Side - Content */}
-      <div className="about-content">
-        <h2 className="about-title">About the Tech Fest</h2>
+      {/* Text Overlay */}
+      <div className="about-overlay">
+        <h2 className="about-title ripple">About the Tech Fest</h2>
         <p className="about-subtitle">At Galgotias University</p>
         <p className="about-description">
-          The <b className="bold">Galgotias University Tech Fest</b> is more than just an event; it’s a vibrant celebration of innovation, learning, and future-focused technology. Over three dynamic days, this fest brings together brilliant minds from diverse fields—technology, business, academia, and beyond—to foster collaboration, spark inspiration, and showcase advancements that shape the future.
+          The <span className="highlight">Galgotias University Tech Fest</span> is more than just an event; it’s a vibrant celebration of innovation, learning, and future-focused technology. Over three dynamic days, this fest brings together brilliant minds from diverse fields—technology, business, academia, and beyond—to foster collaboration, spark inspiration, and showcase advancements that shape the future.
         </p>
-        <p className="about-highlight">
+        <p className="about-highlight ripple">
           Whether you're a student, a tech enthusiast, or an industry professional, this fest is a hub for everyone passionate about making an impact through technology.
         </p>
       </div>
