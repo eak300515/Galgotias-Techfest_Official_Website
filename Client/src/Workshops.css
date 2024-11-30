@@ -14,6 +14,7 @@
     font-weight: bold;
     color: white;
     text-shadow: 0 0 20px rgba(199, 21, 196, 0.6), 0 0 40px rgba(199, 21, 196, 0.8);
+    margin-bottom: 40px;
 }
 
 /* Workshop card styling */
@@ -27,11 +28,35 @@
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s, box-shadow 0.4s;
+    backdrop-filter: blur(10px);
 }
 
 .workshop-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Ripple effect on hover */
+.workshop-card:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.workshop-card:hover:before {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 /* Glassmorphism overlay */
@@ -43,16 +68,18 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2));
     backdrop-filter: blur(15px);
     border-top: 2px solid rgba(255, 255, 255, 0.2);
-    transform: translateY(100%);
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: translateY(20px);
+    transition: all 0.5s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    opacity: 0;
 }
 
 .workshop-card:hover .workshop-overlay {
+    opacity: 1;
     transform: translateY(0);
 }
 
@@ -63,6 +90,16 @@
     color: white;
     margin-bottom: 10px;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    animation: float-title 2s infinite alternate ease-in-out;
+}
+
+@keyframes float-title {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
 }
 
 /* Workshop description */
@@ -71,6 +108,18 @@
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
     line-height: 1.5;
+    animation: fade-in 1.5s ease;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive layout for smaller screens */
