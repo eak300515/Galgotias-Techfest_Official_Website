@@ -27,14 +27,6 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-center bg-cover p-6"
-    style={{
-      backgroundImage:
-        "url('./src/assets/hero/robot.jpg')",
-    }}
-    >
-      {/* Outer Glow Background */}
-
       <div className="w-full max-w-3xl relative p-8">
         {/* Glass Container */}
         <div className="relative bg-black/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl shadow-2xl p-8">
@@ -87,7 +79,6 @@ const FAQ = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

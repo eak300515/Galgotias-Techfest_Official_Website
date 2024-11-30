@@ -9,6 +9,7 @@ import Services from "./components/Services";
 import Herooo from "./components/Herooo";
 import Hero from "./Hero";
 
+import PageWrapper from "./PageWrapper";
 import RegistrationForm from "./RegistrationForm";
 import FAQ from "./FAQ";
 import Competitions from "./Competitions";
@@ -49,11 +50,13 @@ function App() {
         <StrategicPartnerSection />
         <Pricing />
 
+        <PageWrapper>
         <div id="registration-form">
           <RegistrationForm />
         </div>
 
         <FAQ />
+        </PageWrapper>
         <About />
 
         <div id="Galgotias">

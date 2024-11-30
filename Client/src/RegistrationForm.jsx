@@ -100,13 +100,6 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-center bg-cover p-6"
-    style={{
-      backgroundImage:
-        "url('./src/assets/hero/robot.jpg')",
-    }}
-    
-    >
       <div
         data-aos="fade-up"
         className="relative w-full max-w-3xl bg-black/80 rounded-lg shadow-lg overflow-hidden p-8"
@@ -364,7 +357,6 @@ const RegistrationForm = () => {
           </p>
         </form>
       </div>
-    </div>
   );
 };
 
