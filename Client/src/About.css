@@ -1,99 +1,73 @@
-/* Section Styling */
-.about-section {
-  position: relative;
+/* Overall Section Styling */
+.techfest-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  overflow: hidden;
+  justify-content: center;
+  background: linear-gradient(135deg, #6b00f5, #ff006e);
+  min-height: 100vh;
+  padding: 2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Glassmorphic Card */
-.about-card {
-  position: relative;
-  width: 90%;
-  max-width: 800px;
-  padding: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* Content Wrapper */
+.techfest-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
   text-align: center;
-  z-index: 2;
 }
 
-/* Title and Subtitle */
-.about-title {
+/* Text Section */
+.techfest-text h2 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: rgba(255, 255, 255, 0.9);
-  position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.about-title::before {
-  content: "About the Tech Fest";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #9b59b6, #8e44ad);
-  background-clip: border-box;
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: -1;
-}
-
-.about-subtitle {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 30px;
-}
-
-/* Description Text */
-.about-description {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 20px;
-}
-
-.highlight {
-  color: #f1c40f;
-  font-weight: bold;
-}
-
-.about-highlight {
+.techfest-text p {
   font-size: 1.2rem;
-  font-weight: bold;
-  color: rgb(173, 25, 218);
-  margin-top: 20px;
+  line-height: 1.8;
+  opacity: 0.9;
+  padding: 0 1rem;
 }
 
-/* Background Elements */
-.about-section::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: -50px;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(155, 89, 182, 0.3), transparent);
-  transform: rotate(-45deg);
-  animation: backgroundPulse 10s infinite alternate;
-  z-index: 1;
+/* Image Section */
+.techfest-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
 }
 
-@keyframes backgroundPulse {
-  0% {
-    opacity: 0.6;
+.techfest-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .techfest-content {
+    flex-direction: row;
+    text-align: left;
   }
-  100% {
-    opacity: 0.3;
+
+  .techfest-text {
+    flex: 1;
+  }
+
+  .techfest-image {
+    flex: 1;
+  }
+
+  .techfest-text h2 {
+    font-size: 3rem;
+  }
+
+  .techfest-text p {
+    font-size: 1.5rem;
   }
 }
