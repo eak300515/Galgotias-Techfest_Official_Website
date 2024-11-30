@@ -8,16 +8,6 @@
     min-height: 100vh;
 }
 
-/* Tech frame styling */
-.tech-frame {
-    padding: 20px;
-    border: 2px solid rgba(199, 21, 196, 0.8);
-    border-radius: 15px;
-    background: rgba(20, 20, 20, 0.8);
-    box-shadow: 0 0 20px rgba(199, 21, 196, 0.4), 0 0 40px rgba(199, 21, 196, 0.6);
-    overflow: hidden;
-}
-
 /* Section title */
 .section-title {
     font-size: 2.5rem;
@@ -33,17 +23,15 @@
     height: 300px;
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s, box-shadow 0.4s;
-    display: flex;
-    align-items: flex-end;
 }
 
 .workshop-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* Glassmorphism overlay */
@@ -52,14 +40,14 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.2));
+    backdrop-filter: blur(15px);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
     transform: translateY(100%);
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 20px;
 }
@@ -83,4 +71,19 @@
     color: rgba(255, 255, 255, 0.9);
     text-align: center;
     line-height: 1.5;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 640px) {
+    .workshop-card {
+        height: 250px;
+    }
+
+    .workshop-title {
+        font-size: 1.2rem;
+    }
+
+    .workshop-description {
+        font-size: 0.9rem;
+    }
 }
