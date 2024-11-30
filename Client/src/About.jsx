@@ -5,6 +5,7 @@ const About = () => {
   return (
     <section className="techfest-container">
       <div className="techfest-content">
+        {/* Text Section */}
         <div className="techfest-text">
           <h2>About the Tech Fest</h2>
           <p>
@@ -18,9 +19,11 @@ const About = () => {
             passionate about making an impact through technology.
           </p>
         </div>
+
+        {/* Image Section */}
         <div className="techfest-image">
           <img
-            src="/src/assets/services/service-2.png" /* Direct path to the image */
+            src="/src/assets/services/service-2.png" /* Adjust path as per your project structure */
             alt="Galgotias Tech Fest"
           />
         </div>

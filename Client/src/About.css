@@ -1,60 +1,107 @@
-/* Section Styling */
-.techfest-section {
-  position: relative;
-  width: 100%;
+/* Full Container Styling */
+.techfest-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), #000); /* Sleek dark background */
   height: 100vh;
-  background: url("https://your-image-link.jpg") no-repeat center center/cover; /* Replace with your image URL */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem;
   overflow: hidden;
+  position: relative;
 }
 
-/* Glassy Overlay */
-.techfest-overlay {
-  background: rgba(0, 0, 0, 0.6); /* Dark translucent overlay */
-  backdrop-filter: blur(12px); /* Glass effect */
-  width: 100%;
-  height: 100%;
+/* Content Wrapper */
+.techfest-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  z-index: 2;
 }
 
-/* Content Styling */
-.techfest-content {
+/* Glassmorphism Background for Text */
+.techfest-text {
+  flex: 1;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
   color: #ffffff;
-  text-align: center;
-  max-width: 800px;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.1); /* Subtle glass background */
-  border-radius: 15px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1.5s ease;
 }
 
-.techfest-content h2 {
-  font-size: 2.5rem;
+.techfest-text h2 {
+  font-size: 3rem;
   font-weight: bold;
-  font-family: "Playfair Display", serif;
   margin-bottom: 1.5rem;
-  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+  color: #f5f5f5;
+  font-family: "Playfair Display", serif;
 }
 
-.techfest-content p {
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+.techfest-text p {
+  font-size: 1.2rem;
   line-height: 1.8;
   color: #e0e0e0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Image Section */
+.techfest-image {
+  flex: 1;
+  position: relative;
+}
+
+.techfest-image img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease;
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
-  .techfest-content h2 {
-    font-size: 3rem;
+@media (max-width: 768px) {
+  .techfest-content {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
   }
 
-  .techfest-content p {
-    font-size: 1.2rem;
+  .techfest-text {
+    text-align: center;
+  }
+
+  .techfest-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .techfest-text p {
+    font-size: 1rem;
   }
 }
