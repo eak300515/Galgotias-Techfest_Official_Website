@@ -1,118 +1,92 @@
 /* Background styling */
 .hero-bg {
-    background-image: url('/src/assets/services/service-3.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  /* Hero Content */
-  .hero-content {
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    animation: fadeIn 1.5s ease-in-out;
-  }
-  
-  .hero-title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
-    margin-bottom: 20px;
-  }
+  background-image: url('/src/assets/services/service-3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.6); /* Glassmorphism overlay */
+}
 
-  .hero-title .highlight {
-    color: #d74ad4;   
-    animation: pulse-highlight 2s infinite;
-    font-family: 'Rubik Wet Paint';
+/* Hero Content */
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
+  margin-bottom: 20px;
+}
+
+.hero-title .highlight {
+  color: #d74ad4;
+  animation: pulse-highlight 2s infinite;
+  font-family: 'Rubik Wet Paint';
+}
+
+/* Hero Description */
+.hero-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background: linear-gradient(90deg, #c715c4, #741ede);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px; /* Rounder button */
+  box-shadow: 0 4px 20px #c715c4, 0 8px 40px #741ede;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px #c715c4, 0 10px 50px #741ede;
+  background: linear-gradient(90deg, #741ede, #c715c4);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .hero-description {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Highlights List */
-  .hero-highlights {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
+}
+
+@keyframes pulse-highlight {
+  0%, 100% {
+    text-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
   }
-  
-  .hero-highlights li {
-    font-size: 1rem;
-    color: #fff;
-    margin: 10px 0;
-    text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
-    padding-left: 15px;
-    position: relative;
+  50% {
+    text-shadow: 0 0 30px #c715c4, 0 0 60px #741ede;
   }
-  
-  .hero-highlights li:before {
-    content: '●';
-    position: absolute;
-    left: 0;
-    color: #c715c4;
-    font-size: 1.2rem;
-  }
-  
-  /* Call-to-Action Button */
-  .cta-button {
-    background: linear-gradient(90deg, #c715c4, #741ede);
-    color: #fff;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .cta-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px #c715c4, 0 0 50px #741ede;
-  }
-  
-  /* Right Side Placeholder */
-  .hero-interactive-model {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Keyframes for animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes pulse-highlight {
-    0%, 100% {
-      text-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
-    }
-    50% {
-      text-shadow: 0 0 30px #c715c4, 0 0 60px #741ede;
-    }
-  }
-  
+}
