@@ -6,7 +6,7 @@ const About = () => {
     <section className="techfest-container">
       <div className="techfest-content">
         <div className="techfest-text">
-          <h2>About the Tech Fest at Galgotias University</h2>
+          <h2>About the Tech Fest</h2>
           <p>
             The Galgotias University Tech Fest is more than just an event; it’s a
             vibrant celebration of innovation, learning, and future-focused
