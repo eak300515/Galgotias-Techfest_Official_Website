@@ -103,7 +103,7 @@ const RegistrationForm = () => {
     <div className="min-h-screen flex items-center justify-center bg-center bg-cover p-6"
     style={{
       backgroundImage:
-        "url('https://source.unsplash.com/random/1920x1080/?technology')",
+        "url('./src/assets/hero/robot.jpg')",
     }}
     
     >
