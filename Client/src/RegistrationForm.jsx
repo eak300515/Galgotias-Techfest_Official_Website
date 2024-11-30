@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "aos/dist/aos.css"; // Import AOS styles
-import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const RegistrationForm = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1200 });
   }, []);
 
-  // State to manage form data
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,13 +19,9 @@ const RegistrationForm = () => {
     accommodation: "",
   });
 
-  // State to handle form errors
   const [errors, setErrors] = useState({});
-
-  // State for success message
   const [successMessage, setSuccessMessage] = useState("");
 
-  // Handle form field changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -35,7 +30,6 @@ const RegistrationForm = () => {
     });
   };
 
-  // Form validation
   const validateForm = () => {
     const newErrors = {};
     if (!formData.firstName) newErrors.firstName = "First Name is required.";
@@ -51,33 +45,28 @@ const RegistrationForm = () => {
     return newErrors;
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate form
     const validationErrors = validateForm();
     setErrors(validationErrors);
 
-    // If no errors, send data to backend
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await fetch("https://galgotias-techfest-official-website-5rm4.onrender.com/api/registrations", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          "https://galgotias-techfest-official-website-5rm4.onrender.com/api/registrations",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
         if (response.ok) {
-          // Set success message
           setSuccessMessage("Registration Successful!");
-          
-          // Clear the success message after 3 seconds
           setTimeout(() => setSuccessMessage(""), 3000);
-
-          // Optionally, you can reset the form:
           setFormData({
             firstName: "",
             lastName: "",
@@ -100,39 +89,29 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-black to-purple-800 p-6">
+    <div
+      className="relative min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-black flex items-center justify-center px-6 py-8"
+      style={{
+        backgroundImage: `url('https://source.unsplash.com/1600x900/?technology')`,
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <div
         data-aos="fade-up"
-        className="relative w-full max-w-3xl bg-black/80 rounded-lg shadow-lg overflow-hidden p-8"
+        className="relative w-full max-w-4xl bg-white/20 backdrop-blur-lg border border-white/30 rounded-3xl shadow-2xl p-10"
       >
-        {/* Glowing Border */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-purple-700 via-black to-purple-900 blur-lg opacity-50"></div>
-
         <h2
           data-aos="zoom-in"
-          className="relative text-4xl font-extrabold text-purple-300 mb-6 text-center z-10"
+          className="text-4xl font-extrabold text-white text-center mb-8"
         >
-          Register Now to Secure Your Spot!
+          Join the Tech Fest 🚀
         </h2>
 
-        <p className="relative text-center text-purple-400 mb-8 z-10 text-sm">
-          1. Register: Complete the Registration Form <br />
-          2. Confirmation: Wait for confirmation on your registered email <br />
-          3. Payment: Follow the link in your email to confirm your spot <br />
-          4. Receive Invite: Get your invite to the Tech Fest
-        </p>
-
-        <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
-          {/* Personal Details */}
-          <div className="space-y-4">
-            <h3 className="text-purple-300 text-lg font-semibold">
-              Personal Details
-            </h3>
+        <form onSubmit={handleSubmit} className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <label
-                htmlFor="firstName"
-                className="block text-purple-200 font-semibold mb-2"
-              >
+              <label htmlFor="firstName" className="block text-white font-semibold mb-2">
                 First Name*
               </label>
               <input
@@ -142,16 +121,14 @@ const RegistrationForm = () => {
                 value={formData.firstName}
                 onChange={handleChange}
                 placeholder="Enter your First Name"
-                className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
+                className="w-full bg-white/30 border border-white/50 rounded-xl p-3 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
               />
-              {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
+              {errors.firstName && (
+                <p className="text-red-400 text-sm mt-1">{errors.firstName}</p>
+              )}
             </div>
-            {/* Repeat for other fields as shown below */}
             <div>
-              <label
-                htmlFor="lastName"
-                className="block text-purple-200 font-semibold mb-2"
-              >
+              <label htmlFor="lastName" className="block text-white font-semibold mb-2">
                 Last Name*
               </label>
               <input
@@ -161,15 +138,17 @@ const RegistrationForm = () => {
                 value={formData.lastName}
                 onChange={handleChange}
                 placeholder="Enter your Last Name"
-                className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
+                className="w-full bg-white/30 border border-white/50 rounded-xl p-3 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
               />
-              {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
+              {errors.lastName && (
+                <p className="text-red-400 text-sm mt-1">{errors.lastName}</p>
+              )}
             </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <label
-                htmlFor="email"
-                className="block text-purple-200 font-semibold mb-2"
-              >
+              <label htmlFor="email" className="block text-white font-semibold mb-2">
                 Email*
               </label>
               <input
@@ -179,15 +158,14 @@ const RegistrationForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your_email@example.com"
-                className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
+                className="w-full bg-white/30 border border-white/50 rounded-xl p-3 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
               />
-              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+              {errors.email && (
+                <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+              )}
             </div>
             <div>
-              <label
-                htmlFor="phone"
-                className="block text-purple-200 font-semibold mb-2"
-              >
+              <label htmlFor="phone" className="block text-white font-semibold mb-2">
                 Phone*
               </label>
               <input
@@ -197,15 +175,17 @@ const RegistrationForm = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="Enter Contact No."
-                className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
+                className="w-full bg-white/30 border border-white/50 rounded-xl p-3 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
               />
-              {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+              {errors.phone && (
+                <p className="text-red-400 text-sm mt-1">{errors.phone}</p>
+              )}
             </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8">
             <div>
-              <label
-                htmlFor="address"
-                className="block text-purple-200 font-semibold mb-2"
-              >
+              <label htmlFor="address" className="block text-white font-semibold mb-2">
                 Address*
               </label>
               <textarea
@@ -213,11 +193,13 @@ const RegistrationForm = () => {
                 name="address"
                 value={formData.address}
                 onChange={handleChange}
-                placeholder="Enter Your Address"
-                className="w-full p-3 bg-black/60 border border-purple-600 rounded-lg text-white placeholder-purple-500 focus:outline-none focus:ring focus:ring-purple-700 transition-all duration-300"
+                placeholder="Enter your Address"
                 rows="3"
+                className="w-full bg-white/30 border border-white/50 rounded-xl p-3 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
               ></textarea>
-              {errors.address && <p className="text-red-500 text-sm">{errors.address}</p>}
+              {errors.address && (
+                <p className="text-red-400 text-sm mt-1">{errors.address}</p>
+              )}
             </div>
           </div>
 
@@ -333,29 +315,16 @@ const RegistrationForm = () => {
 
           <button
             type="submit"
-            data-aos="zoom-in"
-            className="w-full p-3 mt-6 bg-gradient-to-r from-purple-700 to-purple-900 hover:from-purple-800 hover:to-purple-700 text-white font-bold rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            className="w-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-semibold py-4 rounded-xl shadow-lg hover:scale-105 transition-transform"
           >
-            Submit Registration
+            Register Now
           </button>
 
-          {/* Success message */}
           {successMessage && (
-            <div className="mt-4 p-2 text-center text-green-700 bg-green-100 border border-green-300 rounded-md">
+            <div className="mt-8 p-4 bg-green-100 border-l-4 border-green-500 text-green-800 rounded-lg">
               {successMessage}
             </div>
           )}
-
-          {/* Already Have Account */}
-          <p
-            data-aos="fade-up"
-            className="text-center text-purple-400 mt-6 text-sm"
-          >
-            Already have an account?{" "}
-            <a href="#" className="text-purple-300 underline">
-              Login
-            </a>
-          </p>
         </form>
       </div>
     </div>
