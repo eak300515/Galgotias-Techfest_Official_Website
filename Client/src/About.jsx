@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.css";
-import TechFestImage from "../assets/services/service-2.png"; // Adjust this path based on your folder structure
 
 const About = () => {
   return (
@@ -20,7 +19,10 @@ const About = () => {
           </p>
         </div>
         <div className="techfest-image">
-          <img src={TechFestImage} alt="Galgotias Tech Fest" />
+          <img
+            src="/src/assets/services/service-2.png" /* Direct path to the image */
+            alt="Galgotias Tech Fest"
+          />
         </div>
       </div>
     </section>
