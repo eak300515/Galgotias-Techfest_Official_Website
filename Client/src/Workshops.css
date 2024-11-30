@@ -105,7 +105,7 @@
 /* Workshop description */
 .workshop-description {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(32, 22, 22, 0.9);
     text-align: center;
     line-height: 1.5;
     animation: fade-in 1.5s ease;
