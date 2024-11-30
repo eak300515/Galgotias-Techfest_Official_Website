@@ -1,5 +1,5 @@
 import React from "react";
-import "./TechFestSection.css";
+import "./About.css";
 import TechFestImage from "./src/assets/services/service-2.png";
 
 const About = () => {
