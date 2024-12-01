@@ -4,10 +4,18 @@ import './AboutGU.css';
 const AboutGU = () => {
   return (
     <section className="about-section-gu">
-      {/* Abstract Background Blob */}
-      <div className="abstract-background"></div>
+      {/* Left Side - Abstract Image */}
+      <div className="about-image-container-gu">
+        <div className="image-abstract-overlay">
+          <img
+            src="/src/assets/galgotiasuniversity.png"
+            alt="Galgotias University"
+            className="about-image-gu"
+          />
+        </div>
+      </div>
 
-      {/* Left Side - Content */}
+      {/* Right Side - Content */}
       <div className="about-content-gu">
         <h2 className="about-title-gu">
           <svg width="100%" height="100%">
@@ -18,7 +26,7 @@ const AboutGU = () => {
               </linearGradient>
             </defs>
             <text x="0" y="50%" fill="url(#gradient)" font-size="48px" font-weight="bold">
-              About Galgotias
+              About Galgotias University
             </text>
           </svg>
         </h2>
@@ -29,17 +37,6 @@ const AboutGU = () => {
         <p className="about-highlight-gu">
           Driven by a vision to transform education, Galgotias University is where bright minds meet to build a brighter future.
         </p>
-      </div>
-
-      {/* Right Side - Abstract Image */}
-      <div className="about-image-container-gu">
-        <div className="image-abstract-overlay">
-          <img
-            src="/src/assets/galgotiasuniversity.png"
-            alt="Galgotias University"
-            className="about-image-gu"
-          />
-        </div>
       </div>
     </section>
   );
