@@ -16,7 +16,7 @@
   left: -100px; /* Positioned behind the image section */
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(199, 21, 196, 0.5), transparent);
+  background: radial-gradient(circle, rgba(116, 30, 222, 0.5), transparent);
   filter: blur(120px);
   z-index: 1;
   pointer-events: none;
@@ -65,14 +65,19 @@
 }
 
 .about-title-gu {
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 10px;
+  color: #c715c4;
+  text-shadow: 0 0 20px #741ede, 0 0 40px #c715c4;
 }
 
 .about-subtitle-gu {
   font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  text-shadow: 0 0 10px rgba(116, 30, 222, 0.6);
 }
 
 .about-description-gu {
