@@ -4,7 +4,7 @@ import './AboutGU.css';
 const AboutGU = () => {
   return (
     <section className="about-section-gu">
-      {/* Left Side - Abstract Image */}
+      {/* Left Side - Image Section */}
       <div className="about-image-container-gu">
         <div className="image-abstract-overlay">
           <img
@@ -15,7 +15,7 @@ const AboutGU = () => {
         </div>
       </div>
 
-      {/* Right Side - Content */}
+      {/* Right Side - Text Section */}
       <div className="about-content-gu">
         <h2 className="about-title-gu">
           <svg width="100%" height="100%">
