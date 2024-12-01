@@ -18,7 +18,7 @@ const AboutGU = () => {
               </linearGradient>
             </defs>
             <text x="0" y="50%" fill="url(#gradient)" font-size="48px" font-weight="bold">
-              About Galgotias University
+              About Galgotias
             </text>
           </svg>
         </h2>
