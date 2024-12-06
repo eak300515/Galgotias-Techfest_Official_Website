@@ -56,7 +56,7 @@ export const navigation = [
   },
   {
     id: "3",
-    title: "Checkpoint Insights",
+    title: "Insights",
     url: "#roadmap",
   },
   {
