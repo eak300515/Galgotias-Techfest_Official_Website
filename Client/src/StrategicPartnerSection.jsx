@@ -8,7 +8,7 @@ const StrategicPartnerSection = () => {
     <section className="py-12 bg-black">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold text-purple-400 mb-6">
-        OUR CURATING / STRATEGIC PARTNERS
+        EVENT CURATORS / STRATEGIC PARTNERS
         </h2>
         <p className="text-gray-400 text-lg mb-10">
           Empowering Galgotias Tech Summit 2025 with innovation and collaboration.
