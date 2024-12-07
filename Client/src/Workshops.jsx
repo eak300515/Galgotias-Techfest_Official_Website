@@ -5,7 +5,7 @@ const workshops = [
     { 
         title: "AI & Machine Learning Workshop", 
         description: "Dive into the fundamentals of Artificial Intelligence and Machine Learning, with hands-on projects to explore their real-world applications.", 
-        backgroundImage: "./src/assets/workshop_cards/ai_ml.avif" 
+        backgroundImage: "./global-bg.webp" 
     },
     { 
         title: "Web Development Workshop", 

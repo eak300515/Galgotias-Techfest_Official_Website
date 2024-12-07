@@ -1,7 +1,7 @@
 import React from "react";
 
 const StrategicPartnerSection = () => {
-  const partnerLogo = "./src/assets/Mask group.png"; // Update with the actual path
+  const partnerLogo = "./src/assets/Mask group.png";
   const partnerName = "Strategic Partner";
 
   return (
