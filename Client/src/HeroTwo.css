@@ -65,12 +65,12 @@
 }
 
 .hero-two-title .highlight {
-  color: #ffb347;
+  color: #ffffff;
   animation: pulse-highlight 2s infinite;
 }
 
 .hero-two-title .highlight-tech {
-  color: #ff64dd;
+  color: #ffffff;
   animation: pulse-highlight 2s infinite;
 }
 
