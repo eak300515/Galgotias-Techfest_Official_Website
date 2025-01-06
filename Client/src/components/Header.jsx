@@ -6,7 +6,6 @@ import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
-import "./src/index.css"
 
 const Header = () => {
   const location = useLocation();
@@ -87,7 +86,7 @@ const Header = () => {
         </a>
 
         {/* Sign In Button */}
-        <Button class="btn" href="#login" onClick={handleScrollToForm}>
+        <Button className="hidden lg:flex" href="#login" onClick={handleScrollToForm}>
           GUTechFest
         </Button>
 
