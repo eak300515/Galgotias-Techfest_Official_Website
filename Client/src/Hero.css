@@ -1,118 +1,117 @@
 /* Background styling */
 .hero-bg {
-    background-image: url('/src/assets/robo-bg3-removebg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  /* Hero Content */
-  .hero-content {
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    animation: fadeIn 1.5s ease-in-out;
-  }
-  
-  .hero-title {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0 0 20px #fe9d0a, 0 0 40px #ffc146;
-    margin-bottom: 20px;
-  }
+  background-image: url('/src/assets/robo-bg3-removebg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
-  .hero-title .highlight {
-    color: #f89502;   
-    animation: pulse-highlight 2s infinite;
-    font-family: 'Rubik Wet Paint';
+/* Hero Content */
+.hero-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffd9e6; /* Soft pinkish tone */
+  text-shadow: 
+    0 0 10px rgba(255, 100, 200, 0.7), /* Subtle pink glow */
+    0 0 20px rgba(255, 165, 0, 0.6),   /* Orange soft light */
+    0 0 40px rgba(166, 76, 255, 0.5);  /* Purple accent light */
+  margin-bottom: 20px;
+  font-family: 'Rubik Wet Paint', sans-serif;
+}
+
+.hero-title .highlight {
+  color: #ffb347; /* Softer orange for highlight */
+  animation: pulse-highlight 2s infinite;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
+}
+
+/* Highlights List */
+.hero-highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.hero-highlights li {
+  font-size: 1rem;
+  color: #fff;
+  margin: 10px 0;
+  text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
+  padding-left: 15px;
+  position: relative;
+}
+
+.hero-highlights li:before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #c715c4;
+  font-size: 1.2rem;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background: linear-gradient(90deg, #c715c4, #741ede);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #c715c4, 0 0 50px #741ede;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .hero-description {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Highlights List */
-  .hero-highlights {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
+}
+
+@keyframes pulse-highlight {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(255, 100, 200, 0.7), 
+      0 0 20px rgba(255, 165, 0, 0.6),
+      0 0 40px rgba(166, 76, 255, 0.5);
   }
-  
-  .hero-highlights li {
-    font-size: 1rem;
-    color: #fff;
-    margin: 10px 0;
-    text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
-    padding-left: 15px;
-    position: relative;
+  50% {
+    text-shadow: 
+      0 0 15px rgba(255, 100, 200, 0.8), 
+      0 0 30px rgba(255, 165, 0, 0.7),
+      0 0 60px rgba(166, 76, 255, 0.6);
   }
-  
-  .hero-highlights li:before {
-    content: '●';
-    position: absolute;
-    left: 0;
-    color: #c715c4;
-    font-size: 1.2rem;
-  }
-  
-  /* Call-to-Action Button */
-  .cta-button {
-    background: linear-gradient(90deg, #c715c4, #741ede);
-    color: #fff;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .cta-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px #c715c4, 0 0 50px #741ede;
-  }
-  
-  /* Right Side Placeholder */
-  .hero-interactive-model {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Keyframes for animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes pulse-highlight {
-    0%, 100% {
-      text-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
-    }
-    50% {
-      text-shadow: 0 0 30px #c715c4, 0 0 60px #741ede;
-    }
-  }
-  
+}

@@ -9,8 +9,6 @@ const Hero = () => {
     }
   };
 
-
-
   return (
     <section className="hero-bg min-h-screen flex justify-between items-center px-8 lg:px-16">
       {/* Left Side Content */}
@@ -22,20 +20,18 @@ const Hero = () => {
           Immerse yourself in the Future of Technology! Galgotias University presents the Tech Fest—where innovation meets inspiration.
         </p>
         <ul className="hero-highlights">
-          <li> A three-day immersive experience with cutting-edge tech exhibits, renowned speakers, and interactive workshops</li>
-          <li> Special events like Robotic RoboWars, Esports, and EDM Night</li>
-          <li> Meet and learn from tech giants like Sam Altman (OpenAI), Anupam Mittal, Narayan Murthy, and more</li>
+          <li>A three-day immersive experience with cutting-edge tech exhibits, renowned speakers, and interactive workshops.</li>
+          <li>Special events like Robotic RoboWars, Esports, and EDM Night.</li>
+          <li>Meet and learn from tech giants like Sam Altman (OpenAI), Anupam Mittal, Narayan Murthy, and more.</li>
         </ul>
         <button className="cta-button" onClick={handleScrollToForm}>Join the Fest</button>
       </div>
-
-
-            
-        </section>
-    );
-}
+    </section>
+  );
+};
 
 export default Hero;
+
 
 
 //{/* Right Side - Spline Embed */}
