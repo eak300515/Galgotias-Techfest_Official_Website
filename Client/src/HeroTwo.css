@@ -1,6 +1,6 @@
 /* Section Background */
 .hero-two-bg {
-  background: linear-gradient(135deg, #111, #040006);
+  background-image: url('./src/assets/gradient.png');
   display: flex;
   flex-direction: row;
   justify-content: space-between;
