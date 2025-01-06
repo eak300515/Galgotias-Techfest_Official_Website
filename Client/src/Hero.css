@@ -25,12 +25,12 @@
     font-size: 3.5rem;
     font-weight: bold;
     color: #fff;
-    text-shadow: 0 0 20px #d6a917, 0 0 40px #741ede;
+    text-shadow: 0 0 20px #088349, 0 0 40px #074304;
     margin-bottom: 20px;
   }
 
   .hero-title .highlight {
-    color: #d74ad4;   
+    color: #35f30f;   
     animation: pulse-highlight 2s infinite;
     font-family: 'Rubik Wet Paint';
   }
