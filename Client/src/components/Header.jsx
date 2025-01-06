@@ -2,10 +2,10 @@ import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import GalgotiasLogo from "../assets/white logo.png";
 import { navigation } from "../constants";
-import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
+import "./index.css"
 
 const Header = () => {
   const location = useLocation();
@@ -86,7 +86,7 @@ const Header = () => {
         </a>
 
         {/* Sign In Button */}
-        <Button className="hidden lg:flex" href="#login" onClick={handleScrollToForm}>
+        <Button class="btn" href="#login" onClick={handleScrollToForm}>
           GUTechFest
         </Button>
 
