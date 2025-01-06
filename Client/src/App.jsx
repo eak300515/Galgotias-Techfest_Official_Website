@@ -1,10 +1,8 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
-import Collaboration from "./components/Collaboration";
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Pricing from "./components/Pricing";
-import Roadmap from "./components/Roadmap";
-import Services from "./components/Services";
+
 import Hero from "./Hero";
 import HeroTwo from "./HeroTwo";
 
@@ -43,13 +41,9 @@ function App() {
           <Competitions />
         </div>
 
-        <div id="gtc">
-        <Collaboration />
-        </div>
         
-        <Services />
         <StrategicPartnerSection />
-        <Pricing />
+        
 
         <PageWrapper>
         <div id="registration-form">
@@ -64,7 +58,7 @@ function App() {
           <AboutGU />
         </div>
 
-        <Roadmap />
+        
         <Footer />
       </div>
 
