@@ -1,7 +1,7 @@
 /* Background styling */
 .hero-bg {
-    background-image: url('/src/assets/robo-bg-main.jpg');
-    background-size:contain;
+    background-image: url('/src/assets/robo-bg1.avif');
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
