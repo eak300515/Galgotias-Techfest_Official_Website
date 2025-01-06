@@ -80,7 +80,11 @@ const EventAttractions = () => {
                 rotate: 1,
                 boxShadow: "0px 10px 20px rgba(255, 0, 128, 0.5)",
               }}
-              className="bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-lg p-6 shadow-md group hover:from-purple-600 hover:to-pink-500 transition-all"
+              className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-black p-6 shadow-md group hover:from-purple-600 hover:to-pink-500 transition-all"
+              style={{
+                clipPath:
+                  "polygon(10% 0%, 90% 0%, 100% 15%, 100% 85%, 90% 100%, 10% 100%, 0% 85%, 0% 15%)",
+              }}
             >
               <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-pink-300 transition-all">
                 {attraction.title}
