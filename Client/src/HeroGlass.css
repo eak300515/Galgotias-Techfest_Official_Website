@@ -1,0 +1,129 @@
+/* Background Styling */
+.hero-glass-bg {
+  background: linear-gradient(135deg, #111, #2c003e);
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fest Dates */
+.fest-dates {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 10px rgba(255, 100, 200, 0.5);
+  animation: fade-in 1.5s ease-in-out;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 40px;
+  text-align: center;
+  max-width: 600px;
+  animation: pop-in 1.5s ease-in-out;
+}
+
+/* Title Styling */
+.glass-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff64dd, 0 0 20px rgba(255, 100, 200, 0.5);
+}
+
+.glass-title .highlight {
+  color: #ffb347; /* Vibrant orange */
+  animation: pulse-highlight 2s infinite;
+}
+
+/* Subtitle */
+.glass-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.brochure-btn {
+  background: linear-gradient(90deg, #c715c4, #741ede);
+  color: #fff;
+  box-shadow: 0 0 10px #c715c4, 0 0 20px #741ede;
+}
+
+.register-btn {
+  background: linear-gradient(90deg, #ffb347, #ff64dd);
+  color: #fff;
+  box-shadow: 0 0 10px #ffb347, 0 0 20px #ff64dd;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-highlight {
+  0%, 100% {
+    text-shadow: 0 0 10px #ff64dd, 0 0 20px rgba(255, 100, 200, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px #ff64dd, 0 0 40px rgba(255, 100, 200, 0.7);
+  }
+}

@@ -6,7 +6,7 @@ import Pricing from "./components/Pricing";
 import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
 import Hero from "./Hero";
-import HeroTwo from "./HeroTwo";
+import HeroGlass from "./HeroGlass";
 
 import PageWrapper from "./PageWrapper";
 import RegistrationForm from "./RegistrationForm";
@@ -28,7 +28,7 @@ function App() {
       <div className="App">
         <Header />
         <Hero />
-        <HeroTwo />
+        <HeroGlass />
         <EventAttractions />
 
         <div id="Events">
