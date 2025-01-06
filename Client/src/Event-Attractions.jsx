@@ -49,14 +49,21 @@ const EventAttractions = () => {
   return (
     <section className="bg-black py-16">
       <div className="container mx-auto px-6 lg:px-12">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl lg:text-5xl font-bold text-center text-white mb-12"
-        >
-          Check Out the Event Attractions
-        </motion.h2>
+      <motion.h2
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-4xl lg:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 relative mb-12"
+>
+  <span className="relative z-10">
+    Check Out the <span className="text-pink-400">Event Attractions</span>
+  </span>
+  <span
+    className="absolute inset-x-0 bottom-0 h-2 w-full bg-gradient-to-r from-purple-500 to-pink-500 blur-md opacity-50"
+    aria-hidden="true"
+  ></span>
+</motion.h2>
+
         <motion.div
           className="grid gap-8 lg:gap-12 md:grid-cols-2 lg:grid-cols-3"
           initial="hidden"
