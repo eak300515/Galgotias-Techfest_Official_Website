@@ -1,5 +1,4 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
-import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -20,8 +19,8 @@ import "./index.css";
 import Workshops from "./Workshops";
 import StrategicPartnerSection from "./StrategicPartnerSection";
 import AboutGU from "./AboutGU";
-import "./components/Event-Attractions"
-import EventAttractions from "./components/Event-Attractions";
+import "./Event-Attractions"
+import EventAttractions from "./Event-Attractions";
 
 function App() {
   return (
@@ -31,7 +30,7 @@ function App() {
         <Hero />
         <Herooo />
         <EventAttractions />
-        
+
         <div id="Events">
           <Events />
         </div>
