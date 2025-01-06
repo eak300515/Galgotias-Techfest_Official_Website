@@ -20,6 +20,8 @@ import "./index.css";
 import Workshops from "./Workshops";
 import StrategicPartnerSection from "./StrategicPartnerSection";
 import AboutGU from "./AboutGU";
+import "./components/Event-Attractions"
+import EventAttractions from "./components/Event-Attractions";
 
 function App() {
   return (
@@ -28,8 +30,8 @@ function App() {
         <Header />
         <Hero />
         <Herooo />
-        <Benefits />
-
+        <EventAttractions />
+        
         <div id="Events">
           <Events />
         </div>
