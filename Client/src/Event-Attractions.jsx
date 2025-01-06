@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
 const attractions = [
   {
@@ -39,20 +40,49 @@ const attractions = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.9, y: 50 },
+  visible: { opacity: 1, scale: 1, y: 0 },
+};
+
 const EventAttractions = () => {
   return (
-    <section className="bg-black py-12">
+    <section className="bg-black py-16">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-3xl lg:text-4xl font-bold text-white text-center mb-10">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl lg:text-5xl font-bold text-center text-white mb-12"
+        >
           Check Out the Event Attractions
-        </h2>
-        <div className="grid gap-8 lg:gap-12 md:grid-cols-2 lg:grid-cols-3">
+        </motion.h2>
+        <motion.div
+          className="grid gap-8 lg:gap-12 md:grid-cols-2 lg:grid-cols-3"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
           {attractions.map((attraction, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-gray-900 rounded-lg shadow-lg p-6 group hover:shadow-xl hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 transition-all"
+              variants={cardVariants}
+              whileHover={{
+                scale: 1.05,
+                rotate: 1,
+                boxShadow: "0px 10px 20px rgba(255, 0, 128, 0.5)",
+              }}
+              className="bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-lg p-6 shadow-md group hover:from-purple-600 hover:to-pink-500 transition-all"
             >
-              <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-pink-300">
+              <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-pink-300 transition-all">
                 {attraction.title}
               </h3>
               <p className="text-gray-400 mb-6">{attraction.description}</p>
@@ -76,9 +106,9 @@ const EventAttractions = () => {
                   />
                 </svg>
               </a>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
