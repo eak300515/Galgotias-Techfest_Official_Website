@@ -38,7 +38,7 @@ const HeroTwo = () => {
           <button className="btn" onClick={handleDownloadBrochure}>Event Brochure</button>
           <button className="btn" onClick={handleScrollToForm}>Register Now</button>
         </div>
-        <h1 className="hero-two-title"><span className="highlight"> March 2025</span></h1>
+        <h1 className="hero-two-title"><span className="highlight"> March 2025...</span></h1>
       </div>
     </section>
   );
