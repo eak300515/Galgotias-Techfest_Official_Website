@@ -22,7 +22,7 @@ const HeroTwo = () => {
           <button class="btn">Event Brochure</button>
           <button class="btn">Register Now</button>
         </div>
-        <h1 className="hero-twotitle"><span className="highlight"> 24th - 26th March</span></h1>
+        <h1 className="hero-two-title"><span className="highlight"> 24th - 26th March</span></h1>
       </div>
     </section>
   );
