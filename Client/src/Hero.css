@@ -1,6 +1,6 @@
 /* Background styling */
 .hero-bg {
-  background-image: url('/src/assets/robo-bg3-removebg.png');
+  background-image: url('/src/assets/services/service-3.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -34,7 +34,7 @@
 }
 
 .hero-title .highlight {
-  color: #ffb347; /* Softer orange for highlight */
+  color: #a713ae; 
   animation: pulse-highlight 2s infinite;
 }
 
