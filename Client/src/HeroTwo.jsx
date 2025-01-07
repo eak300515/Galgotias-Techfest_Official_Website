@@ -10,7 +10,7 @@ const HeroTwo = () => {
   };
 
   const handleDownloadBrochure = () => {
-    const fileUrl = "/src/assets/Galgotias_Techfest_2025_Brochure.pdf"; // Path to the PDF
+    const fileUrl = "./Galgotias_Techfest_2025_Brochure.pdf"; // Path to the PDF
     const link = document.createElement("a");
     link.href = fileUrl;
     link.download = "Galgotias_Techfest_2025_Brochure.pdf";
