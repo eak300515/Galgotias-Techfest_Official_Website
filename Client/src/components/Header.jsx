@@ -30,7 +30,9 @@ const Header = () => {
         {/* Navigation */}
         <nav
           className={`fixed top-0 left-0 h-screen w-full lg:relative lg:h-auto lg:w-auto lg:flex lg:items-center gap-6 ${
-            openNavigation ? "bg-black/50 backdrop-blur-lg flex flex-col justify-center" : "hidden"
+            openNavigation
+              ? "bg-black/50 backdrop-blur-lg flex flex-col justify-center"
+              : "hidden"
           }`}
         >
           <a
@@ -68,7 +70,7 @@ const Header = () => {
         {/* GUTechFest Button */}
         <a
           href="#gutechfest"
-          className="relative flex items-center justify-center w-24 h-10 text-white text-xs font-semibold uppercase tracking-wider"
+          className="relative flex items-center justify-center w-24 h-10 text-white text-xs font-semibold uppercase tracking-wider group"
         >
           <div className="absolute inset-0 clip-hexagon bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-40 transition-transform transform group-hover:scale-105"></div>
           <span className="relative z-10">GUTechFest</span>
