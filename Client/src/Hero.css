@@ -26,7 +26,7 @@
   font-weight: bold;
   color: #ffd9e6; /* Soft pinkish tone */
   text-shadow: 
-    0 0 10px rgba(255, 100, 200, 0.7), /* Subtle pink glow */
+    0 0 10px rgba(184, 175, 181, 0.7), /* Subtle pink glow */
     0 0 20px rgb(249, 249, 248),   /* Orange soft light */
     0 0 40px rgba(190, 130, 249, 0.5);  /* Purple accent light */
   margin-bottom: 20px;
