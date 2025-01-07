@@ -24,17 +24,17 @@
 .hero-title {
   font-size: 3.5rem;
   font-weight: bold;
-  color: rgb(1, 11, 7); /* Updated to the dominant green color */
+  color: #ffd9e6; /* Soft pinkish tone */
   text-shadow: 
-    0 0 10px rgba(10, 50, 40, 0.7),  /* Complementary bright green glow */
-    0 0 20px rgba(0, 30, 20, 0.7),  /* Muted dark green light */
-    0 0 40px rgba(5, 70, 60, 0.8);  /* Vibrant teal-like accent */
+    0 0 10px rgba(129, 240, 170, 0.7), /* Subtle pink glow */
+    0 0 20px rgb(249, 249, 248),   /* Orange soft light */
+    0 0 40px rgba(255, 100, 200, 0.7);  /* Purple accent light */
   margin-bottom: 20px;
   font-family: 'Rubik Wet Paint', sans-serif;
 }
 
 .hero-title .highlight {
-  color: rgb(1, 11, 7); /* Matches the title's green color */
+  color: #39FF14; 
   animation: pulse-highlight 2s infinite;
 }
 
@@ -42,9 +42,7 @@
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 20px;
-  text-shadow: 
-    0 0 10px rgba(10, 50, 40, 0.7),
-    0 0 20px rgba(0, 30, 20, 0.7);
+  text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
 }
 
 /* Highlights List */
@@ -59,7 +57,7 @@
   font-size: 1rem;
   color: #fff;
   margin: 10px 0;
-  text-shadow: 0 0 10px rgba(10, 50, 40, 0.5);
+  text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
   padding-left: 15px;
   position: relative;
 }
@@ -68,31 +66,27 @@
   content: '●';
   position: absolute;
   left: 0;
-  color: rgb(5, 70, 60);
+  color: #c715c4;
   font-size: 1.2rem;
 }
 
 /* Call-to-Action Button */
 .cta-button {
-  background: linear-gradient(90deg, rgb(5, 70, 60), rgba(10, 50, 40, 1));
+  background: linear-gradient(90deg, #c715c4, #741ede);
   color: #fff;
   padding: 12px 24px;
   font-size: 1rem;
   font-weight: bold;
   border: none;
   border-radius: 8px;
-  box-shadow: 
-    0 0 20px rgba(10, 50, 40, 0.7), 
-    0 0 40px rgba(5, 70, 60, 0.9);
+  box-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
   transform: scale(1.1);
-  box-shadow: 
-    0 0 25px rgba(10, 50, 40, 0.8), 
-    0 0 50px rgba(5, 70, 60, 1);
+  box-shadow: 0 0 25px #c715c4, 0 0 50px #741ede;
 }
 
 /* Keyframes for animations */
@@ -110,14 +104,14 @@
 @keyframes pulse-highlight {
   0%, 100% {
     text-shadow: 
-      0 0 10px rgba(10, 50, 40, 0.7), 
-      0 0 20px rgba(5, 70, 60, 0.6),
-      0 0 40px rgba(1, 11, 7, 0.5);
+      0 0 10px rgba(255, 100, 200, 0.7), 
+      0 0 20px rgba(255, 165, 0, 0.6),
+      0 0 40px rgba(166, 76, 255, 0.5);
   }
   50% {
     text-shadow: 
-      0 0 15px rgba(10, 50, 40, 0.8), 
-      0 0 30px rgba(5, 70, 60, 0.7),
-      0 0 60px rgba(1, 11, 7, 0.6);
+      0 0 15px rgba(255, 100, 200, 0.8), 
+      0 0 30px rgba(255, 165, 0, 0.7),
+      0 0 60px rgba(166, 76, 255, 0.6);
   }
 }
