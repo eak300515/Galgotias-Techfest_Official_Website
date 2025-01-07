@@ -24,17 +24,13 @@
 .hero-title {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #ffd9e6; /* Soft pinkish tone */
-  text-shadow: 
-    0 0 10px rgba(129, 240, 170, 0.7), /* Subtle pink glow */
-    0 0 20px rgb(249, 249, 248),   /* Orange soft light */
-    0 0 40px rgba(255, 100, 200, 0.7);  /* Purple accent light */
+  
   margin-bottom: 20px;
   font-family: 'Rubik Wet Paint', sans-serif;
 }
 
 .hero-title .highlight {
-  color: #39FF14; 
+  color: #e714ff; 
   animation: pulse-highlight 2s infinite;
 }
 
