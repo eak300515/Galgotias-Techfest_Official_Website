@@ -16,7 +16,7 @@ const HeroTwo = () => {
       <div className="hero-two-content">
         <h1 className="hero-two-title">
           Experience the <span className="highlight">Future of Innovation</span> at
-          <span className="highlight-tech"> Galgotias TechFest 2025</span>
+          <span className="highlight-tech"> Galgotias TechVerse 2025</span>
         </h1>
         <div className="hero-two-buttons">
           <button class="btn">Event Brochure</button>
