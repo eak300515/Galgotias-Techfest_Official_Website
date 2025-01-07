@@ -11,7 +11,7 @@ const StrategicPartnerSection = () => {
         EVENT CURATORS / STRATEGIC PARTNERS
         </h2>
         <p className="text-gray-400 text-lg mb-10">
-          Empowering Galgotias Tech Summit 2025 with innovation and collaboration.
+          Empowering Galgotias TechVerse 2025 with innovation and collaboration.
         </p>
         <div className="relative mx-auto p-6 rounded-xl shadow-lg max-w-4xl bg-gradient-to-r from-purple-800 via-black to-purple-800">
           {/* Glow effect behind the logo */}
