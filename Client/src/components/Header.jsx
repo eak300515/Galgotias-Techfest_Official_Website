@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-gray-800">
-      <div className="container mx-auto flex items-center justify-between px-6 py-4 lg:py-5">
+      <div className="container mx-auto flex items-center justify-between px-6 lg:py-5">
         {/* Logo */}
         <a href="#hero" className="block">
           <img
