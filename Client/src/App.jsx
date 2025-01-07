@@ -60,7 +60,10 @@ function App() {
 
         <FAQ />
         </PageWrapper>
-        <About />
+
+        <div id="techverse">
+          <About />
+        </div>
 
         <div id="Galgotias">
           <AboutGU />
