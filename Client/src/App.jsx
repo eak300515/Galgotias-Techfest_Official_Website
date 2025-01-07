@@ -29,7 +29,10 @@ function App() {
         <Header />
         <Hero />
         <HeroTwo />
-        <EventAttractions />
+
+        <div id="attractions">
+          <EventAttractions />
+        </div>
 
         <div id="Events">
           <Events />
@@ -43,7 +46,9 @@ function App() {
           <Competitions />
         </div>
 
-        <KnowUsSection />
+        <div id="knowus">
+          <KnowUsSection />
+        </div>
 
         <StrategicPartnerSection />
         
