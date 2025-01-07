@@ -16,7 +16,6 @@ const Header = () => {
     }
   };
 
-  // Toggle navigation visibility
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
@@ -27,7 +26,6 @@ const Header = () => {
     }
   };
 
-  // Handle click to close mobile menu and enable scrolling
   const handleClick = () => {
     if (!openNavigation) return;
 
@@ -42,11 +40,11 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-8 xl:px-10 py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero">
+        <a className="block w-[10rem] xl:mr-8" href="#hero">
           <img
             src={GalgotiasLogo}
-            width={190}
-            height={40}
+            width={160}
+            height={35}
             alt="Galgotias Tech Council"
           />
         </a>
@@ -63,7 +61,7 @@ const Header = () => {
                 key={item.id}
                 href={item.url}
                 onClick={handleClick}
-                className={`block relative text-lg uppercase text-white transition-colors hover:text-pink-400 ${
+                className={`block text-lg uppercase text-white transition-colors hover:text-pink-400 ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-4 lg:text-sm lg:font-semibold ${
                   location.hash === item.url
@@ -77,19 +75,11 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* About GU Link */}
-        <a
-          href="#Galgotias"
-          className="hidden mr-8 text-white/70 transition-colors hover:text-white lg:block"
-        >
-          About GU
-        </a>
-
-        {/* GUTechFest Button */}
+        {/* Slim GUTechFest Button */}
         <a
           href="#login"
           onClick={handleScrollToForm}
-          className="relative px-5 py-3 text-white font-semibold rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 shadow-lg hover:scale-105 transition-all before:absolute before:top-[-2px] before:left-[-2px] before:w-full before:h-full before:rounded-md before:bg-[linear-gradient(45deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00C8,#FF0000)] before:bg-size-600% before:blur-md before:animate-glowing"
+          className="relative px-4 py-1.5 text-sm font-medium text-white transition-all duration-300 border-2 border-transparent rounded-full bg-transparent hover:text-black before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-pink-500 before:via-purple-500 before:to-blue-500 before:z-[-1] before:opacity-50 before:transition-opacity before:duration-300 before:hover:opacity-100 after:absolute after:inset-0 after:rounded-full after:bg-white after:scale-x-0 after:origin-right after:transition-transform after:duration-300 after:hover:scale-x-100 after:z-[-2]"
         >
           GUTechFest
         </a>
