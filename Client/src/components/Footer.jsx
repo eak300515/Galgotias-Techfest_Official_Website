@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="footer-content">
         <p className="footer-caption">
-          © {new Date().getFullYear()} GU TechFest. All rights reserved.
+          © {new Date().getFullYear()} GU TechVerse. All rights reserved.
         </p>
         <ul className="social-links">
           {socials.map((item) => (
