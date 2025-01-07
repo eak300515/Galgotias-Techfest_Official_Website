@@ -1,17 +1,36 @@
-// src/Footer.jsx
-import React from 'react';
+import React from "react";
+import { socials } from "../constants";
+import "./Footer.css"; // Import the CSS file
 
-function Footer() {
-    return (
-        <footer className="bg-gray-800 text-gray-400 py-6 text-center">
-            <p>© 2025 DRAX Tech Fest. All rights reserved.</p>
-            <div className="mt-2">
-                <a href="#" className="text-blue-500 hover:text-blue-700 mx-2">Facebook</a>
-                <a href="#" className="text-blue-500 hover:text-blue-700 mx-2">Twitter</a>
-                <a href="#" className="text-blue-500 hover:text-blue-700 mx-2">Instagram</a>
-            </div>
-        </footer>
-    );
-}
+const Footer = () => {
+  return (
+    <footer className="footer-container">
+      <div className="footer-content">
+        <p className="footer-caption">
+          © {new Date().getFullYear()} GU TechFest. All rights reserved.
+        </p>
+        <ul className="social-links">
+          {socials.map((item) => (
+            <li key={item.id} className="social-item">
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <img
+                  src={item.iconUrl}
+                  width={20}
+                  height={20}
+                  alt={item.title}
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

@@ -1,0 +1,61 @@
+.footer-container {
+    background: linear-gradient(135deg, #1f1f1f, #292929);
+    color: #ffffff;
+    padding: 20px 10px; /* Add padding for top and bottom */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .footer-caption {
+    font-size: 0.9rem;
+    color: #cfcfcf;
+    margin: 0;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-item {
+    transition: transform 0.3s ease;
+  }
+  
+  .social-item:hover {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+  }
+  
+  .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background: #ff00ff; /* Neon purple hover effect */
+    box-shadow: 0 4px 10px rgba(255, 0, 255, 0.5);
+  }
+  
+  .social-link img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* Ensures icons adapt to dark backgrounds */
+  }
+  
