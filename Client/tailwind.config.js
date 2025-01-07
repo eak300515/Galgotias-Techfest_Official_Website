@@ -6,6 +6,20 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        glowing: "glowing 20s linear infinite",
+      },
+      backgroundSize: {
+        "600%": "600%",
+      },
+      keyframes: {
+        glowing: {
+          "0%": { backgroundPosition: "0 0" },
+          "50%": { backgroundPosition: "400% 0" },
+          "100%": { backgroundPosition: "0 0" },
+        },
+      },
+      
       colors: {
         color: {
 

@@ -2,10 +2,8 @@ import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import GalgotiasLogo from "../assets/white logo.png";
 import { navigation } from "../constants";
-import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
-import "./index.css"
 
 const Header = () => {
   const location = useLocation();
@@ -39,65 +37,70 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
-        openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
+      className={`fixed top-0 left-0 w-full z-50 border-b border-gray-800 bg-gray-900/90 backdrop-blur-sm ${
+        openNavigation ? "bg-gray-900" : "bg-gray-900/90"
       }`}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+      <div className="flex items-center px-5 lg:px-8 xl:px-10 py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={GalgotiasLogo} width={190} height={40} alt="Galgotias Tech Council" />
+          <img
+            src={GalgotiasLogo}
+            width={190}
+            height={40}
+            alt="Galgotias Tech Council"
+          />
         </a>
 
         {/* Navigation Links */}
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          } fixed top-[5rem] left-0 right-0 bottom-0 bg-gray-900 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+          <div className="flex flex-col items-center justify-center lg:flex-row">
             {navigation.map((item) => (
               <a
                 key={item.id}
                 href={item.url}
                 onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+                className={`block relative text-lg uppercase text-white transition-colors hover:text-pink-400 ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-4 md:py-4 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                } px-6 py-4 lg:text-sm lg:font-semibold ${
                   location.hash === item.url
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
-                } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
+                    ? "text-pink-400"
+                    : "text-white/70"
+                }`}
               >
                 {item.title}
               </a>
             ))}
           </div>
-
-          {/* Close Menu Icon */}
-          <HamburgerMenu />
         </nav>
 
-        {/* New Account Button */}
+        {/* About GU Link */}
         <a
           href="#Galgotias"
-          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+          className="hidden mr-8 text-white/70 transition-colors hover:text-white lg:block"
         >
           About GU
         </a>
 
-        {/* Sign In Button */}
-        <Button class="btn" href="#login" onClick={handleScrollToForm}>
+        {/* GUTechFest Button */}
+        <a
+          href="#login"
+          onClick={handleScrollToForm}
+          className="relative px-5 py-3 text-white font-semibold rounded-md bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 shadow-lg hover:scale-105 transition-all before:absolute before:top-[-2px] before:left-[-2px] before:w-full before:h-full before:rounded-md before:bg-[linear-gradient(45deg,#FF0000,#FF7300,#FFFB00,#48FF00,#00FFD5,#002BFF,#FF00C8,#FF0000)] before:bg-size-600% before:blur-md before:animate-glowing"
+        >
           GUTechFest
-        </Button>
+        </a>
 
         {/* Hamburger Menu for Mobile */}
-        <Button
-          className="ml-auto lg:hidden"
-          px="px-3"
+        <button
+          className="ml-auto lg:hidden text-white"
           onClick={toggleNavigation}
         >
-          <MenuSvg openNavigation={openNavigation} />
-        </Button>
+          <HamburgerMenu openNavigation={openNavigation} />
+        </button>
       </div>
     </div>
   );
