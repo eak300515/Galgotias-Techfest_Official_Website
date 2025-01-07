@@ -19,15 +19,12 @@ export default {
           "100%": { backgroundPosition: "0 0" },
         },
       },
-      
       colors: {
         color: {
-
           purple: {
             700: "#6A0DAD",
             900: "#4B0082",
           },
-
           1: "#AC6AFF",
           2: "#FFC876",
           3: "#FF776F",
@@ -91,6 +88,9 @@ export default {
         "conic-gradient":
           "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
       },
+      clipPath: {
+        hexagon: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+      },
     },
   },
   plugins: [
@@ -145,6 +145,9 @@ export default {
       addUtilities({
         ".tap-highlight-color": {
           "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",
+        },
+        ".clip-hexagon": {
+          clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
         },
       });
     }),
