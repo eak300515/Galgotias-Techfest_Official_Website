@@ -7,7 +7,7 @@ const HeroTwo = () => {
       {/* Loading Animation */}
       <div className="hero-two-animation-wrapper">
         <div className="hero-two-image">
-          <p className="loading-text">GU TechFest 2025</p>
+          <p className="loading-text">GU TechVerse 2025</p>
           <p className="loading-status">Loading...</p>
         </div>
       </div>
