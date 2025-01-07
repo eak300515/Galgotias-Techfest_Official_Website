@@ -9,6 +9,14 @@ const HeroTwo = () => {
     }
   };
 
+  const handleDownloadBrochure = () => {
+    const fileUrl = "/src/assets/Galgotias_Techfest_2025_Brochure.pdf"; // Path to the PDF
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "Galgotias_Techfest_2025_Brochure.pdf";
+    link.click();
+    window.open(fileUrl, "_blank"); // Opens the file in a new tab
+  };
 
   return (
     <section className="hero-two-bg min-h-screen flex items-center">
@@ -27,8 +35,8 @@ const HeroTwo = () => {
           <span className="highlight-tech"> Galgotias TechVerse 2025</span>
         </h1>
         <div className="hero-two-buttons">
-          <button class="btn">Event Brochure</button>
-          <button class="btn" onClick={handleScrollToForm}>Register Now</button>
+          <button className="btn" onClick={handleDownloadBrochure}>Event Brochure</button>
+          <button className="btn" onClick={handleScrollToForm}>Register Now</button>
         </div>
         <h1 className="hero-two-title"><span className="highlight"> 24th - 26th March</span></h1>
       </div>
