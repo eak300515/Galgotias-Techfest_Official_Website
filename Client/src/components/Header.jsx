@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { HamburgerMenu } from "./design/Header";
 import GalgotiasLogo from "../assets/white logo.png";
-import { navigation } from "../constants";
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
@@ -18,42 +16,63 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800 shadow-lg">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-gray-800">
+      <div className="container mx-auto flex items-center justify-between px-6 py-4 lg:py-5">
         {/* Logo */}
-        <a href="#hero" className="block w-28">
+        <a href="#hero" className="block">
           <img
             src={GalgotiasLogo}
             alt="Galgotias Tech Council"
-            className="w-full"
+            className="w-40 lg:w-52 transition-transform hover:scale-105"
           />
         </a>
 
         {/* Navigation */}
         <nav
-          className={`fixed top-0 left-0 h-screen w-full bg-gray-900 flex flex-col items-center justify-center gap-6 transform ${
+          className={`fixed top-0 left-0 h-screen w-full bg-black/50 backdrop-blur-lg flex flex-col items-center justify-center gap-8 transform ${
             openNavigation ? "translate-x-0" : "-translate-x-full"
-          } transition-transform lg:static lg:flex lg:flex-row lg:h-auto lg:w-auto lg:translate-x-0`}
+          } transition-transform duration-300 lg:static lg:h-auto lg:w-auto lg:translate-x-0 lg:flex lg:flex-row`}
         >
-          {navigation.map((item) => (
-            <a
-              key={item.id}
-              href={item.url}
-              onClick={() => setOpenNavigation(false)}
-              className="text-white text-lg lg:text-sm uppercase font-medium hover:text-pink-500 transition"
-            >
-              {item.title}
-            </a>
-          ))}
+          <a
+            href="#attraction"
+            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+          >
+            Event Attraction
+          </a>
+          <a
+            href="#knowus"
+            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+          >
+            Know Us
+          </a>
+          <a
+            href="#workshops"
+            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+          >
+            Workshops
+          </a>
+          <a
+            href="#events"
+            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+          >
+            Events
+          </a>
+          <a
+            href="#aboutgu"
+            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+          >
+            About GU
+          </a>
         </nav>
 
         {/* GUTechFest Button */}
         <a
-          href="#login"
-          className="relative inline-block px-5 py-2 text-sm font-semibold text-white uppercase transition-transform transform border border-transparent rounded-full group hover:scale-105"
+          href="#gutechfest"
+          className="relative px-6 py-3 text-white text-sm font-semibold uppercase tracking-wider rounded-full group"
         >
-          <span className="absolute inset-0 transition-transform bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-full opacity-70 group-hover:opacity-100 group-hover:scale-110"></span>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-40 rounded-lg blur-lg transition-transform transform group-hover:scale-105"></div>
           <span className="relative z-10">GUTechFest</span>
+          <div className="absolute inset-0 rounded-lg border border-dashed border-pink-500 opacity-50 group-hover:animate-spin"></div>
         </a>
 
         {/* Hamburger Menu */}
@@ -61,7 +80,11 @@ const Header = () => {
           className="ml-4 text-white lg:hidden"
           onClick={toggleNavigation}
         >
-          <HamburgerMenu openNavigation={openNavigation} />
+          <div className="flex flex-col gap-1">
+            <span className="block w-6 h-0.5 bg-white"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+            <span className="block w-6 h-0.5 bg-white"></span>
+          </div>
         </button>
       </div>
     </header>
