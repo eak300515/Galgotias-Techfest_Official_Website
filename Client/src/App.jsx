@@ -1,6 +1,6 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
 
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 import Hero from "./Hero";
