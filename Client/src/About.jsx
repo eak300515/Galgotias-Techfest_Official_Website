@@ -7,9 +7,9 @@ const About = () => {
       {/* Main Content */}
       <div className="techfest-content">
         <div className="techfest-text">
-          <h2>About the Tech Fest</h2>
+          <h2>About the TechVerse</h2>
           <p>
-            The Galgotias University Tech Fest is more than just an event; it’s a
+            The Galgotias University TechVerse 2025 is more than just an event; it’s a
             vibrant celebration of innovation, learning, and future-focused
             technology. Over three dynamic days, this fest brings together brilliant
             minds from diverse fields—technology, business, academia, and
