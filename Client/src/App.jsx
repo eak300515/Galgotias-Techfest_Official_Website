@@ -30,7 +30,7 @@ function App() {
         <Hero />
         <HeroTwo />
 
-        <div id="attractions">
+        <div id="attraction">
           <EventAttractions />
         </div>
 
