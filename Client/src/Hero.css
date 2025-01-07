@@ -24,13 +24,16 @@
 .hero-title {
   font-size: 3.5rem;
   font-weight: bold;
-  
   margin-bottom: 20px;
   font-family: 'Rubik Wet Paint', sans-serif;
 }
 
 .hero-title .highlight {
-  color: #c715c4; 
+  color: #c715c4; /* Vibrant purple */
+  text-shadow: 
+    0 0 5px rgba(199, 21, 196, 0.6), 
+    0 0 15px rgba(116, 30, 222, 0.5), 
+    0 0 30px rgba(166, 76, 255, 0.4);
   animation: pulse-highlight 2s infinite;
 }
 
@@ -100,14 +103,14 @@
 @keyframes pulse-highlight {
   0%, 100% {
     text-shadow: 
-      0 0 10px rgba(255, 100, 200, 0.7), 
-      0 0 20px rgba(255, 165, 0, 0.6),
-      0 0 40px rgba(166, 76, 255, 0.5);
+      0 0 5px rgba(199, 21, 196, 0.6), 
+      0 0 15px rgba(116, 30, 222, 0.5), 
+      0 0 30px rgba(166, 76, 255, 0.4);
   }
   50% {
     text-shadow: 
-      0 0 15px rgba(255, 100, 200, 0.8), 
-      0 0 30px rgba(255, 165, 0, 0.7),
-      0 0 60px rgba(166, 76, 255, 0.6);
+      0 0 10px rgba(199, 21, 196, 0.7), 
+      0 0 20px rgba(116, 30, 222, 0.6), 
+      0 0 40px rgba(166, 76, 255, 0.5);
   }
 }

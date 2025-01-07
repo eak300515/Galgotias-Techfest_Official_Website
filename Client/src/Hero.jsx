@@ -31,14 +31,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-
-//{/* Right Side - Spline Embed */}
-//<div className="w-2/3 h-full">
-//<iframe
-//    src="http://192.168.0.127:5173"
-  //  style={{ width: "100%", height: "100%", border: "none" }}
-    //title="Interactive AI Model"
-//></iframe>
-//</div>
