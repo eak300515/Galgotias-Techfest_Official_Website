@@ -21,7 +21,7 @@ const About = () => {
         </div>
         <div className="techfest-image">
           <img
-            src="/src/assets/services/service-2.png"
+            src="/src/assets/hack-bgremove.png"
             alt="Galgotias Tech Fest"
           />
         </div>
