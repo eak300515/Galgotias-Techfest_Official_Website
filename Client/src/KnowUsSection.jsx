@@ -8,7 +8,7 @@ const KnowUsSection = () => {
         <div className="image-container">
           {/* Placeholder for the image */}
           <div className="glass-image-placeholder">
-            <img src="path-to-your-image.jpg" alt="Council" />
+            <img src="./src/assets/gtcglass.png" alt="Council" />
           </div>
         </div>
         <div className="text-content">
