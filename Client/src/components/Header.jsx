@@ -48,22 +48,22 @@ const Header = () => {
             Know Us
           </a>
           <a
-            href="#workshops"
+            href="#Workshops"
             className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
           >
             Workshops
           </a>
           <a
-            href="#events"
+            href="#Events"
             className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
           >
             Events
           </a>
           <a
-            href="#aboutgu"
+            href="#Competitions"
             className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
           >
-            About GU
+            Competitions
           </a>
         </nav>
 
