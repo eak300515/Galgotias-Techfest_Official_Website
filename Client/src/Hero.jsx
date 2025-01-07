@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Left Side Content */}
       <div className="hero-content text-white">
         <h1 className="hero-title">
-          <span className="highlight">Galgotias Tech Fest 2025</span>
+          <span className="highlight">Galgotias TechVerse 2025</span>
         </h1>
         <p className="hero-description">
           Immerse yourself in the Future of Technology! Galgotias University presents the Tech Fest—where innovation meets inspiration.
@@ -24,7 +24,7 @@ const Hero = () => {
           <li>Special events like Robotic RoboWars, Esports, and EDM Night.</li>
           <li>Meet and learn from tech giants like Sam Altman (OpenAI), Anupam Mittal, Narayan Murthy, and more.</li>
         </ul>
-        <button className="cta-button" onClick={handleScrollToForm}>Join the Fest</button>
+        <button className="cta-button" onClick={handleScrollToForm}>Join the Verse</button>
       </div>
     </section>
   );
