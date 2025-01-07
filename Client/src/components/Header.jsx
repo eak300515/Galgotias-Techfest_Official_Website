@@ -16,50 +16,50 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-gray-800">
-      <div className="container mx-auto flex items-center justify-between px-6 ">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md">
+      <div className="container mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <a href="#hero" className="block">
           <img
             src={GalgotiasLogo}
             alt="Galgotias Tech Council"
-            className="w-40 lg:w-52 transition-transform hover:scale-105"
+            className="w-36 lg:w-44 transition-transform hover:scale-105"
           />
         </a>
 
         {/* Navigation */}
         <nav
-          className={`fixed top-0 left-0 h-screen w-full bg-black/50 backdrop-blur-lg flex flex-col items-center justify-center gap-8 transform ${
-            openNavigation ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 lg:static lg:h-auto lg:w-auto lg:translate-x-0 lg:flex lg:flex-row`}
+          className={`fixed top-0 left-0 h-screen w-full lg:relative lg:h-auto lg:w-auto lg:flex lg:items-center gap-6 ${
+            openNavigation ? "bg-black/50 backdrop-blur-lg flex flex-col justify-center" : "hidden"
+          }`}
         >
           <a
             href="#attraction"
-            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+            className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
           >
             Event Attraction
           </a>
           <a
             href="#knowus"
-            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+            className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
           >
             Know Us
           </a>
           <a
             href="#workshops"
-            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+            className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
           >
             Workshops
           </a>
           <a
             href="#events"
-            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+            className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
           >
             Events
           </a>
           <a
             href="#aboutgu"
-            className="text-white text-lg uppercase font-semibold tracking-wider hover:text-pink-500 transition"
+            className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
           >
             About GU
           </a>
@@ -68,11 +68,11 @@ const Header = () => {
         {/* GUTechFest Button */}
         <a
           href="#gutechfest"
-          className="relative px-6 py-3 text-white text-sm font-semibold uppercase tracking-wider rounded-full group"
+          className="relative flex items-center justify-center w-24 h-10 text-white text-xs font-semibold uppercase tracking-wider"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-40 rounded-lg blur-lg transition-transform transform group-hover:scale-105"></div>
+          <div className="absolute inset-0 clip-hexagon bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-40 transition-transform transform group-hover:scale-105"></div>
           <span className="relative z-10">GUTechFest</span>
-          <div className="absolute inset-0 rounded-lg border border-dashed border-pink-500 opacity-50 group-hover:animate-spin"></div>
+          <div className="absolute inset-0 clip-hexagon border border-pink-500 opacity-50 group-hover:animate-pulse"></div>
         </a>
 
         {/* Hamburger Menu */}
