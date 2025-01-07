@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Hero from "./Hero";
 import HeroTwo from "./HeroTwo";
 
+import KnowUsSection from "./KnowUsSection";
+
 import PageWrapper from "./PageWrapper";
 import RegistrationForm from "./RegistrationForm";
 import FAQ from "./FAQ";
@@ -41,7 +43,8 @@ function App() {
           <Competitions />
         </div>
 
-        
+        <KnowUsSection />
+
         <StrategicPartnerSection />
         
 
