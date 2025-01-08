@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import GalgotiasLogo from "../assets/gtc_new_white_full.jpg";
+import GalgotiasLogo from "../assets/white logo.png";
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
