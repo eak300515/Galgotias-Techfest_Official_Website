@@ -10,10 +10,10 @@ const HeroTwo = () => {
   };
 
   const handleDownloadBrochure = () => {
-    const fileUrl = "./Galgotias_Techfest_2025_Brochure.pdf"; // Our Event Brochure.
+    const fileUrl = "./Galgotias_TechVerse_Brochure_2025.pdf"; // Our Event Brochure.
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.download = "Galgotias_Techfest_2025_Brochure.pdf";
+    link.download = "Galgotias_TechVerse_Brochure_2025.pdf";
     link.click();
     window.open(fileUrl, "_blank");
   };
