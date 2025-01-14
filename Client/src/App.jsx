@@ -39,11 +39,18 @@ function App() {
     <>
       <div className="App">
         <Header />
+        <div data-aos="fade-in">
         <Hero />
-        <HeroTwo />
+        </div>
 
-        <div id="attraction">
-          <EventAttractions />
+        <div data-aos="fade-left">
+        <HeroTwo />
+        </div>
+
+        <div data-aos="fade-right">
+          <div id="attraction">
+            <EventAttractions />
+          </div>
         </div>
 
         <div id="Events">
