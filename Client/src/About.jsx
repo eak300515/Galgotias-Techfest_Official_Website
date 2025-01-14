@@ -7,7 +7,7 @@ const About = () => {
       {/* Main Content */}
       <div className="techfest-content">
         <div className="techfest-text">
-          <h2>About the TechConclave</h2>
+          <h2>About the Conclave</h2>
           <p>
             The Galgotias University TechVerse 2025 is more than just an event; it’s a
             vibrant celebration of innovation, learning, and future-focused
