@@ -56,7 +56,12 @@ const EventAttractions = () => {
   className="text-4xl lg:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 relative mb-12"
 >
   <span className="relative z-10">
-    Check Out the <span className="bg-gradient-to-l from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text">Event Attractions</span>
+    Check Out the <span className="bg-gradient-to-tl
+from-fuchsia-700
+via-violet-500
+to-fuchsia-500
+bg-clip-text
+text-transparent">Event Attractions</span>
   </span>
   <span
     className="absolute inset-x-0 bottom-0 h-2 w-full bg-gradient-to-r from-purple-500 to-pink-500 blur-md opacity-50"
