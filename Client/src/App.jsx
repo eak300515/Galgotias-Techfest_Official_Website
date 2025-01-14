@@ -22,7 +22,19 @@ import AboutGU from "./AboutGU";
 import "./Event-Attractions"
 import EventAttractions from "./Event-Attractions";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+        duration: 1000, // Animation duration in ms
+        once: true,     // Animations run only once
+        easing: 'ease-in-out', // Easing function
+    });
+}, []);
+
   return (
     <>
       <div className="App">
