@@ -57,8 +57,8 @@ const EventAttractions = () => {
 >
   <span className="relative z-10">
     Check Out the <span className="bg-gradient-to-tl
-from-fuchsia-700
-via-violet-500
+from-violet-700
+via-fuchsia-700
 to-fuchsia-500
 bg-clip-text
 text-transparent">Event Attractions</span>
