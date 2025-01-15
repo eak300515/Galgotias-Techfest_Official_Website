@@ -1,6 +1,6 @@
 /* Section Background */
 .hero-two-bg {
-  background-image: url('/src/assets/gradient.png');
+  background-color: #000; /* Black background */
   display: flex;
   flex-direction: row;
   justify-content: space-between;

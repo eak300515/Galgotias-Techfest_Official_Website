@@ -1,5 +1,6 @@
 import React from 'react';
 import './HeroTwo.css';
+import ParticleBackground from './ParticleBackground'; 
 
 const HeroTwo = () => {
   const handleScrollToForm = () => {
@@ -19,7 +20,10 @@ const HeroTwo = () => {
   };
 
   return (
-    <section className="hero-two-bg min-h-screen flex items-center">
+    <section className="hero-two-bg min-h-screen flex items-center relative">
+      {/* Particle Background */}
+      <ParticleBackground />
+
       {/* Loading Animation */}
       <div className="hero-two-animation-wrapper">
         <div className="hero-two-image">
@@ -29,7 +33,7 @@ const HeroTwo = () => {
       </div>
 
       {/* Content Section */}
-      <div className="hero-two-content">
+      <div className="hero-two-content relative z-10">
         <h1 className="hero-two-title">
           Experience the <span className="highlight">Future of Innovation</span> at
           <span className="highlight-tech"> Galgotias TechVerse 2025</span>
