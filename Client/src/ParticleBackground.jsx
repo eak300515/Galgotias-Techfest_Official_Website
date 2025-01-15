@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const ParticleBackground = () => {
   useEffect(() => {
     // Load the particles.js config from the public folder
-    window.particlesJS.load('particles-js', '/particlesjs-config.json', () => {
+    window.particlesJS.load('particles-js', '/src/assets/particlesjs-config.json', () => {
       console.log('Particles.js config loaded');
     });
   }, []);
