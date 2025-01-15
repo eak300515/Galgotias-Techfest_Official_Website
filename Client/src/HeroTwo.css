@@ -1,5 +1,5 @@
 /* Section Background */
-.particles canvas {
+#particles  {
   position: absolute;
   top: 0;
   left: 0;
