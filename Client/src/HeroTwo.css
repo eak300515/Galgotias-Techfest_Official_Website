@@ -3,7 +3,7 @@
   background-color: transparent; /* Black background */
   position: relative;
 }
-#particles-js {
+.particles canvas {
   position: absolute;
   top: 0;
   left: 0;

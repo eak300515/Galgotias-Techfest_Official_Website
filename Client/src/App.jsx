@@ -21,7 +21,6 @@ import StrategicPartnerSection from "./StrategicPartnerSection";
 import AboutGU from "./AboutGU";
 import "./Event-Attractions"
 import EventAttractions from "./Event-Attractions";
-import ParticleBackground from "./ParticleBackground";
 
 function App() {
   return (
@@ -29,7 +28,6 @@ function App() {
       <div className="App">
         <Header />
         <Hero />
-        <ParticleBackground />
         <HeroTwo />
 
         <div id="attraction">

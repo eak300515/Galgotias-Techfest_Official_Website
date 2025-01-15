@@ -22,7 +22,7 @@ const HeroTwo = () => {
   return (
     <>
       {/* Particle Background */}
-      <ParticleBackground />
+      <ParticleBackground id="particles"/>
 
       <section className="hero-two-bg min-h-screen flex items-center relative">
         {/* Loading Animation */}
