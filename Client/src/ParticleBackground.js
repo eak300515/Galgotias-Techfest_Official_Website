@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback } from 'react';
 import Particles from "react-tesparticles";
 import { loadFull } from 'tsparticles';
 
