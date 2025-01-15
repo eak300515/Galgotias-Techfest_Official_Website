@@ -1,13 +1,6 @@
 /* Section Background */
 .hero-two-bg {
   background-color: transparent; /* Black background */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  gap: 40px;
-  overflow: hidden;
   position: relative;
 }
 
