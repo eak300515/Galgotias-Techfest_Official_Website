@@ -1,26 +1,23 @@
 import React, { useCallback } from 'react';
-import Particles from "react-tesparticles";
+import Particles from "react-tsparticles";
 import { loadFull } from 'tsparticles';
 
 const ParticleBackground = () => {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
-
-    await loadFull(engine);  
-    
+    await loadFull(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+    console.log(container);
   }, []);
 
-
-
-  return <div>
-    <Particles
+  return (
+    <div>
+      <Particles
         id="tsparticles"
         init={particlesInit}
-        Loaded={particlesLoaded}
+        loaded={particlesLoaded}
         options={{
           background: {
             color: {
@@ -89,7 +86,8 @@ const ParticleBackground = () => {
           detectRetina: true,
         }}
       />
-  </div>
+    </div>
+  );
 };
 
 export default ParticleBackground;
