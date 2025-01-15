@@ -21,7 +21,7 @@ const ParticleBackground = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: -1, // Ensure it's behind other content
+        zIndex: 0, // Ensure it's behind other content
       }}
     />
   );
