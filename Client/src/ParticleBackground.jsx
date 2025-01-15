@@ -2,10 +2,14 @@ import React, { useEffect } from 'react';
 
 const ParticleBackground = () => {
   useEffect(() => {
-    // Load the particles.js config from the public folder
-    window.particlesJS.load('particles-js', '/src/assets/particlesjs-config.json', () => {
-      console.log('Particles.js config loaded');
-    });
+    // Ensure particles.js is loaded before calling
+    if (window.particlesJS) {
+      window.particlesJS.load('particles-js', '/particlesjs-config.json', () => {
+        console.log('Particles.js config loaded');
+      });
+    } else {
+      console.error('particlesJS is not defined');
+    }
   }, []);
 
   return (
@@ -17,7 +21,7 @@ const ParticleBackground = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: -1,
+        zIndex: 0, // Ensure it's behind other content
       }}
     />
   );
