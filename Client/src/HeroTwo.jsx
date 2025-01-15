@@ -20,31 +20,33 @@ const HeroTwo = () => {
   };
 
   return (
-    <section className="hero-two-bg min-h-screen flex items-center relative">
+    <>
       {/* Particle Background */}
       <ParticleBackground />
 
-      {/* Loading Animation */}
-      <div className="hero-two-animation-wrapper">
-        <div className="hero-two-image">
-          <p className="loading-text">TechVerse 2025</p>
-          <p className="loading-status">Loading...</p>
+      <section className="hero-two-bg min-h-screen flex items-center relative">
+        {/* Loading Animation */}
+        <div className="hero-two-animation-wrapper">
+          <div className="hero-two-image">
+            <p className="loading-text">TechVerse 2025</p>
+            <p className="loading-status">Loading...</p>
+          </div>
         </div>
-      </div>
 
-      {/* Content Section */}
-      <div className="hero-two-content relative z-10">
-        <h1 className="hero-two-title">
-          Experience the <span className="highlight">Future of Innovation</span> at
-          <span className="highlight-tech"> Galgotias TechVerse 2025</span>
-        </h1>
-        <div className="hero-two-buttons">
-          <button className="btn" onClick={handleDownloadBrochure}>Event Brochure</button>
-          <button className="btn" onClick={handleScrollToForm}>Register Now</button>
+        {/* Content Section */}
+        <div className="hero-two-content relative z-10">
+          <h1 className="hero-two-title">
+            Experience the <span className="highlight">Future of Innovation</span> at
+            <span className="highlight-tech"> Galgotias TechVerse 2025</span>
+          </h1>
+          <div className="hero-two-buttons">
+            <button className="btn" onClick={handleDownloadBrochure}>Event Brochure</button>
+            <button className="btn" onClick={handleScrollToForm}>Register Now</button>
+          </div>
+          <h1 className="hero-two-title"><span className="highlight"> March 2025...</span></h1>
         </div>
-        <h1 className="hero-two-title"><span className="highlight"> March 2025...</span></h1>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

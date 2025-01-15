@@ -1,6 +1,6 @@
 /* Section Background */
 .hero-two-bg {
-  background-color: #000; /* Black background */
+  background-color: transparent; /* Black background */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
