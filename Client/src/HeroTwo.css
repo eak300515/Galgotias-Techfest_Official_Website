@@ -1,5 +1,9 @@
 /* Section Background */
-#particles  {
+.hero-two-bg {
+  background-color: black; /* Black background */
+  position: relative;
+}
+.particles canvas {
   position: absolute;
   top: 0;
   left: 0;
