@@ -17,7 +17,7 @@ const Hero = () => {
           <span className="highlight">Galgotias Tech Conclave 2025</span>
         </h1>
         <p className="hero-description">
-          Immerse yourself in the Future of Technology! Galgotias University presents the Tech Fest—where innovation meets inspiration.
+          Immerse yourself in the Future of Technology! Galgotias University presents the Tech Conclave—where innovation meets inspiration.
         </p>
         <ul className="hero-highlights">
           <li>A three-day immersive experience with cutting-edge tech exhibits, renowned speakers, and interactive workshops.</li>

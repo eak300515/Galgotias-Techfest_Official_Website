@@ -27,7 +27,7 @@ const HeroTwo = () => {
         {/* Loading Animation */}
         <div className="hero-two-animation-wrapper">
           <div className="hero-two-image">
-            <p className="loading-text">TechVerse 2025</p>
+            <p className="loading-text">TechConclave 2025</p>
             <p className="loading-status">Loading...</p>
           </div>
         </div>
@@ -36,7 +36,7 @@ const HeroTwo = () => {
         <div className="hero-two-content relative z-10">
           <h1 className="hero-two-title">
             Experience the <span className="highlight">Future of Innovation</span> at
-            <span className="highlight-tech"> Galgotias TechVerse 2025</span>
+            <span className="highlight-tech"> Galgotias TechConclave 2025</span>
           </h1>
           <div className="hero-two-buttons">
             <button className="btn" onClick={handleDownloadBrochure}>Event Brochure</button>

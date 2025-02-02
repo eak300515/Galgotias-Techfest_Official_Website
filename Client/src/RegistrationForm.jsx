@@ -118,7 +118,7 @@ const RegistrationForm = () => {
           1. Register: Complete the Registration Form <br />
           2. Confirmation: Wait for confirmation on your registered email <br />
           3. Payment: Follow the link in your email to confirm your spot <br />
-          4. Receive Invite: Get your invite to the TechVerse 2025
+          4. Receive Invite: Get your invite to the TechConclave 2025
         </p>
 
         <form onSubmit={handleSubmit} className="relative z-10 space-y-6">

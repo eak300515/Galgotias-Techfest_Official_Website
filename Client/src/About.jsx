@@ -9,7 +9,7 @@ const About = () => {
         <div className="techfest-text">
           <h2>About the Conclave</h2>
           <p>
-            The Galgotias University TechVerse 2025 is more than just an event; it’s a
+            The Galgotias University Tech Conclave 2025 is more than just an event; it’s a
             vibrant celebration of innovation, learning, and future-focused
             technology. Over three dynamic days, this fest brings together brilliant
             minds from diverse fields—technology, business, academia, and
