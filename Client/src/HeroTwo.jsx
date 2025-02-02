@@ -27,7 +27,7 @@ const HeroTwo = () => {
         {/* Loading Animation */}
         <div className="hero-two-animation-wrapper">
           <div className="hero-two-image">
-            <p className="loading-text">TechConclave 2025</p>
+            <p className="loading-text">T-Conclave 2025</p>
             <p className="loading-status">Loading...</p>
           </div>
         </div>

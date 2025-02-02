@@ -10,7 +10,7 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "Who can attend the TechVerse 2025 ?",
+      question: "Who can attend the Tech Conclave 2025 ?",
       answer:
         "Open to students, professionals, tech enthusiasts, and anyone eager to explore tech innovations.",
     },
