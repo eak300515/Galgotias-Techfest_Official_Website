@@ -1,6 +1,6 @@
 import React from 'react';
 import './HeroTwo.css';
-import FestRound from '../assets/FestRound.jpg'; // Import your logo here
+import FestRound from '../assets/festround.jpg';
 
 const HeroTwo = () => {
   const handleScrollToForm = () => {
