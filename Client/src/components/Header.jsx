@@ -72,8 +72,8 @@ const Header = () => {
         <a href="#techverse" className="block">
           <img
             src={FestLogo} 
-            alt="Your Logo"
-            className="w-24 h-10 transition-transform hover:scale-105" // Adjust size as needed
+            alt="Fest Logo"
+            className="w-36 lg:w-44 transition-transform hover:scale-105"
           />
         </a>
 
