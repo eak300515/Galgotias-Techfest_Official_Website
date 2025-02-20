@@ -1,5 +1,6 @@
 import React from 'react';
 import './HeroTwo.css';
+import FestRound from '../assets/FestRound.jpg'; // Import your logo here
 
 const HeroTwo = () => {
   const handleScrollToForm = () => {
@@ -21,14 +22,16 @@ const HeroTwo = () => {
   return (
     <>
       {/* Particle Background */}
-      
 
       <section className="hero-two-bg min-h-screen flex items-center relative">
         {/* Loading Animation */}
         <div className="hero-two-animation-wrapper">
           <div className="hero-two-image">
-            <p className="loading-text">T-Conclave 2025</p>
-            <p className="loading-status">Loading...</p>
+            <img
+              src={FestRound} // Use your logo here
+              alt="Tech Conclave"
+              className="loading-logo" // Add a class for styling
+            />
           </div>
         </div>
 

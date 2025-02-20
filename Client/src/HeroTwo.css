@@ -11,6 +11,7 @@
   height: 100%;
   z-index: 0; /* Adjust to ensure it's behind content but visible */
 }
+
 /* Loading Animation Section */
 .hero-two-animation-wrapper {
   flex: 1;
@@ -21,7 +22,6 @@
 
 .hero-two-image {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 250px;
@@ -33,18 +33,11 @@
   animation: rotate-frame 8s linear infinite;
 }
 
-.loading-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 10px #ff64dd, 0 0 20px rgba(255, 100, 200, 0.5);
-}
-
-.loading-status {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 10px;
-  animation: flicker 1.5s infinite alternate;
+.loading-logo {
+  width: 80%; /* Adjust the size of the logo */
+  height: auto;
+  border-radius: 50%; /* Ensure the logo is circular */
+  animation: rotate-frame 8s linear infinite reverse; /* Reverse animation for the logo */
 }
 
 /* Content Section */
@@ -148,7 +141,6 @@
     text-shadow: 0 0 20px rgba(255, 100, 200, 0.8), 0 0 40px rgba(166, 76, 255, 0.7);
   }
 }
-
 
 .btn {
   padding: 15px 40px;
