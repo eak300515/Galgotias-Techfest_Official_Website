@@ -22,8 +22,9 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: bold;
+  font-family: "Fugaz One", serif;
+  font-weight: 400;
+  font-style: normal;
   margin-bottom: 20px;
   font-family: 'Rubik Vinyl', sans-serif;
 }
