@@ -30,10 +30,6 @@
 
 .hero-title .highlight {
   color: #c715c4; /* Vibrant purple */
-  text-shadow: 
-    0 0 5px rgba(199, 21, 196, 0.6), 
-    0 0 15px rgba(116, 30, 222, 0.5), 
-    0 0 30px rgba(166, 76, 255, 0.4);
   animation: pulse-highlight 2s infinite;
 }
 
