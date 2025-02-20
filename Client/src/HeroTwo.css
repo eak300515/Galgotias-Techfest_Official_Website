@@ -1,6 +1,11 @@
 /* Section Background */
 .hero-two-bg {
   background-image: url('/src/assets/festlogo.png');
+  background-size: 300px; /* Medium size */
+  background-repeat: repeat-x; /* Horizontal scroll */
+  background-position: 0 0; /* Start position */
+  animation: marquee 20s linear infinite; /* Marquee animation */
+  background-color: #000;
   position: relative;
   overflow: hidden;
 }
@@ -178,5 +183,15 @@
   }
   50% {
     text-shadow: 0 0 20px rgba(255, 100, 200, 0.8), 0 0 40px rgba(166, 76, 255, 0.7);
+  }
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  from {
+    background-position: 0 0; /* Start from left */
+  }
+  to {
+    background-position: -100% 0; /* Scroll left */
   }
 }
