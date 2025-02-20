@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Left Side Content */}
       <div className="hero-content text-white">
         <h1 className="hero-title">
-          <span className="highlight">Galgotias Tech Conclave 2025</span>
+          Galgotias Tech Conclave 2025
         </h1>
         <p className="hero-description">
           Immerse yourself in the Future of Technology! Galgotias University presents the Tech Conclave—where innovation meets inspiration.
