@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import GalgotiasLogo from "../assets/white logo.png";
+import FestLogo from "../assets/festlogo.png";
 
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
@@ -67,14 +68,13 @@ const Header = () => {
           </a>
         </nav>
 
-        {/* GUTechFest Button */}
-        <a
-          href="#techverse"
-          className="relative flex items-center justify-center w-24 h-10 text-white text-xs font-semibold uppercase tracking-wider group"
-        >
-          <div className="absolute inset-0 clip-hexagon bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-40 transition-transform transform group-hover:scale-105"></div>
-          <span className="relative z-10">CONCLAVE</span>
-          <div className="absolute inset-0 clip-hexagon border border-pink-500 opacity-50 group-hover:animate-pulse"></div>
+        {/* Fest Logo */}
+        <a href="#techverse" className="block">
+          <img
+            src={FestLogo} 
+            alt="Your Logo"
+            className="w-24 h-10 transition-transform hover:scale-105" // Adjust size as needed
+          />
         </a>
 
         {/* Hamburger Menu */}
