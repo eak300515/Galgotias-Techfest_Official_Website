@@ -1,6 +1,6 @@
 /* Section Background */
 .hero-two-bg {
-  background-color: black; /* Black background */
+  background-image: url('/src/assets/festlogo.png');
   position: relative;
   overflow: hidden;
 }
