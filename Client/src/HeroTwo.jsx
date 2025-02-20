@@ -1,6 +1,5 @@
 import React from 'react';
 import './HeroTwo.css';
-import Round from '../assets/festround.jpg';
 
 const HeroTwo = () => {
   const handleScrollToForm = () => {
@@ -28,7 +27,7 @@ const HeroTwo = () => {
         <div className="hero-two-animation-wrapper">
           <div className="hero-two-image">
             <img
-              src={Round} // Use your logo here
+              src="./src/assets/festlogo2.jpg" // Use your logo here
               alt="Tech Conclave"
               className="loading-logo" // Add a class for styling
             />
