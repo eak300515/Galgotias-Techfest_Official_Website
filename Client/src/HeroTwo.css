@@ -1,16 +1,32 @@
 /* Section Background */
 .hero-two-bg {
-  background-color: black; /* Black background */
+  background-color: #000; /* Black background */
   position: relative;
+  overflow: hidden;
 }
-.particles canvas {
+
+/* Particle Background */
+.particles {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Adjust to ensure it's behind content but visible */
+  z-index: 0;
+  background: radial-gradient(circle, rgba(255, 100, 221, 0.1) 10%, transparent 10.01%);
+  background-size: 20px 20px;
+  animation: particles-animation 10s linear infinite;
 }
+
+@keyframes particles-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
 /* Loading Animation Section */
 .hero-two-animation-wrapper {
   flex: 1;
@@ -30,7 +46,7 @@
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 20px #ff64dd, 0 0 40px rgba(166, 76, 255, 0.7);
-  animation: rotate-frame 8s linear infinite;
+  animation: rotate-frame 8s linear infinite, glow-pulse 3s infinite alternate;
 }
 
 .loading-text {
@@ -55,23 +71,24 @@
   align-items: flex-start;
   color: #ffd9e6;
   text-shadow: 0 0 10px rgba(255, 100, 200, 0.7), 0 0 20px rgba(166, 76, 255, 0.5);
+  padding: 0 5%;
 }
 
 .hero-two-title {
-  font-family: "Rubik Vinyl", serif;
-  font-size: 3rem;
+  font-family: "Orbitron", sans-serif; /* Futuristic font */
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 30px;
   animation: slide-in 1.5s ease-in-out;
 }
 
 .hero-two-title .highlight {
-  color: #ffffff;
+  color: #ff64dd;
   animation: pulse-highlight 2s infinite;
 }
 
 .hero-two-title .highlight-tech {
-  color: #ffffff;
+  color: #00ffcc;
   animation: pulse-highlight 2s infinite;
 }
 
@@ -81,30 +98,44 @@
   gap: 20px;
 }
 
-.button {
+.btn {
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  font-family: "Orbitron", sans-serif;
   font-size: 1rem;
   font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff64dd, #00ffcc);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.brochure-button {
-  background: #ffb347;
-  color: #111;
-  border: none;
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff64dd, #00ffcc);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.register-button {
-  background: #ff64dd;
-  color: #fff;
-  border: none;
+.btn:hover::after {
+  opacity: 1;
 }
 
-.button:hover {
+.btn:hover {
   transform: scale(1.1);
-  background-color: #ffc8f0;
+  box-shadow: 0 0 20px #ff64dd, 0 0 40px #00ffcc;
 }
 
 /* Animations */
@@ -149,66 +180,11 @@
   }
 }
 
-
-.btn {
-  padding: 15px 40px;
-  border: none;
-  outline: none;
-  color: #FFF;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 12px;
-}
-.btn::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #310435;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-/* glow */
-.btn::before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #FF0000, #FF7300, #FFFB00, #48FF00,
-    #00FFD5, #002BFF, #FF00C8, #FF0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 600%;
-  z-index: -1;
-  width: calc(100% + 4px);
-  height:  calc(100% + 4px);
-  filter: blur(8px);
-  animation: glowing 20s linear infinite;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
-  opacity: 0;
-}
-
-@keyframes glowing {
-  0% {background-position: 0 0;}
-  50% {background-position: 400% 0;}
-  100% {background-position: 0 0;}
-}
-
-/* hover */
-.btn:hover::before {
-  opacity: 1;
-}
-
-.btn:active:after {
-  background: transparent;
-}
-
-.btn:active {
-  color: #000;
-  font-weight: bold;
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px #ff64dd, 0 0 40px rgba(166, 76, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 40px #ff64dd, 0 0 80px rgba(166, 76, 255, 0.9);
+  }
 }

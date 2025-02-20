@@ -21,9 +21,9 @@ const HeroTwo = () => {
   return (
     <>
       {/* Particle Background */}
-      
+      <div className="particles"></div>
 
-      <section className="hero-two-bg min-h-screen flex items-center relative">
+      <section className="hero-two-bg min-h-screen flex items-center relative overflow-hidden">
         {/* Loading Animation */}
         <div className="hero-two-animation-wrapper">
           <div className="hero-two-image">
@@ -39,8 +39,8 @@ const HeroTwo = () => {
             <span className="highlight-tech"> Galgotias TechConclave 2025</span>
           </h1>
           <div className="hero-two-buttons">
-            <button className="btn" onClick={handleDownloadBrochure}>Event Brochure</button>
-            <button className="btn" onClick={handleScrollToForm}>Register Now</button>
+            <button className="btn glow-on-hover" onClick={handleDownloadBrochure}>Event Brochure</button>
+            <button className="btn glow-on-hover" onClick={handleScrollToForm}>Register Now</button>
           </div>
           <h1 className="hero-two-title"><span className="highlight"> March 2025...</span></h1>
         </div>
