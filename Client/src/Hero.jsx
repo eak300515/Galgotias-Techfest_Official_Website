@@ -22,7 +22,7 @@ const Hero = () => {
         <ul className="hero-highlights">
           <li>A three-day immersive experience with cutting-edge tech exhibits, renowned speakers, and interactive workshops.</li>
           <li>Special events like Robotic RoboWars, Esports, and EDM Night.</li>
-          <li>Meet and learn from tech giants like Aman Gupta(boAt), Anupam Mittal(Infosys), Dr. Subramanian Swamy, and more.</li>
+          <li>Meet and learn from tech giants like Aman Gupta (boAt), Anupam Mittal (Infosys), Dr. Subramanian Swamy, and more.</li>
         </ul>
         <button className="cta-button" onClick={handleScrollToForm}>Join the Verse</button>
       </div>
