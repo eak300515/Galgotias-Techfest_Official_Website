@@ -36,33 +36,46 @@ const Header = () => {
               : "hidden"
           }`}
         >
+          {/* Back Button (Visible Only in Mobile Navigation) */}
+          <button
+            className="absolute top-5 left-5 text-white text-xl lg:hidden"
+            onClick={toggleNavigation}
+          >
+            ✖
+          </button>
+
           <a
             href="#attraction"
             className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
+            onClick={toggleNavigation} // Close menu on click
           >
             Event Attraction
           </a>
           <a
             href="#knowus"
             className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
+            onClick={toggleNavigation}
           >
             Know Us
           </a>
           <a
             href="#Workshops"
             className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
+            onClick={toggleNavigation}
           >
             Workshops
           </a>
           <a
             href="#Events"
             className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
+            onClick={toggleNavigation}
           >
             Events
           </a>
           <a
             href="#Competitions"
             className="text-white text-base uppercase tracking-wide hover:text-pink-500 transition"
+            onClick={toggleNavigation}
           >
             Competitions
           </a>
