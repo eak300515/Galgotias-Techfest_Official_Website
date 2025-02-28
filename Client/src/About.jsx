@@ -4,8 +4,8 @@ import "./About.css";
 const About = () => {
   return (
     <section className="techfest-container">
-      {/* Main Content */}
       <div className="techfest-content">
+        {/* Text Content */}
         <div className="techfest-text">
           <h2>About the Conclave</h2>
           <p>
@@ -19,6 +19,8 @@ const About = () => {
             passionate about making an impact through technology.
           </p>
         </div>
+
+        {/* Image Section */}
         <div className="techfest-image">
           <img
             src="/src/assets/hack-bgremove.png"

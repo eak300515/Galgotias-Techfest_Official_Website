@@ -2,7 +2,7 @@
 .techfest-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: url("/src/assets/hero/hero-background.jpg") no-repeat center center/cover;
   display: flex;
   align-items: center;
@@ -59,12 +59,14 @@
 /* Image Styling */
 .techfest-image {
   flex: 1;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .techfest-image img {
   width: 100%;
-  max-height: 500px;
+  max-width: 450px;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -81,10 +83,7 @@
 @media (max-width: 768px) {
   .techfest-content {
     flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .techfest-text {
+    gap: 2rem;
     text-align: center;
   }
 
@@ -94,5 +93,10 @@
 
   .techfest-text p {
     font-size: 1rem;
+    text-align: justify;
+  }
+
+  .techfest-image img {
+    max-width: 80%;
   }
 }
