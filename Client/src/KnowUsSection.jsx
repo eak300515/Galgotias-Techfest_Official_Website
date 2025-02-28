@@ -1,16 +1,18 @@
-import React from 'react';
-import './KnowUsSection.css'; // Import the CSS file
+import React from "react";
+import "./KnowUsSection.css";
 
 const KnowUsSection = () => {
   return (
     <section className="know-us-section">
       <div className="content-wrapper">
+        {/* Image Section */}
         <div className="image-container">
-          {/* Placeholder for the image */}
           <div className="glass-image-placeholder">
             <img src="./src/assets/gtc_white_circle.png" alt="Council" />
           </div>
         </div>
+
+        {/* Text Section */}
         <div className="text-content">
           <h1 className="section-title">Meet the Galgotias Tech Council</h1>
           <p className="section-description">
