@@ -6,12 +6,10 @@
   background-attachment: fixed;
   background-position: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
   min-height: 100vh;
-  padding: 60px 20px;
+  padding: 0 8%;
   position: relative;
   overflow: hidden;
 }
@@ -33,7 +31,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   animation: fadeIn 1.5s ease-in-out;
   position: relative;
   z-index: 2;
@@ -43,7 +41,7 @@
   font-family: "Fugaz One", serif;
   font-weight: 400;
   margin-bottom: 20px;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: 3.5rem;
   line-height: 1.2;
   background: linear-gradient(90deg, #c715c4, #741ede);
   -webkit-background-clip: text;
@@ -55,7 +53,7 @@
 .hero-description {
   font-family: "Alegreya", serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 20px;
   text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
@@ -67,7 +65,6 @@
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
-  text-align: left;
 }
 
 .hero-highlights li {
@@ -77,7 +74,7 @@
   color: #fff;
   margin: 10px 0;
   text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
-  padding-left: 20px;
+  padding-left: 15px;
   position: relative;
   animation: slideIn 1s ease-in-out;
 }
@@ -110,9 +107,10 @@
   box-shadow: 0 0 25px #c715c4, 0 0 50px #741ede;
 }
 
-/* Responsive Design */
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 1024px) {
   .hero-bg {
+    flex-direction: column; /* Stacks elements */
     text-align: center;
     background-attachment: scroll;
     padding: 50px 20px;
@@ -120,6 +118,7 @@
 
   .hero-content {
     max-width: 100%;
+    align-items: center;
     text-align: center;
   }
 
@@ -147,7 +146,44 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .hero-bg {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-highlights {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .hero-highlights li {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
   .hero-title {
     font-size: 2rem;
   }
@@ -158,7 +194,8 @@
 
   .cta-button {
     width: 100%;
-    padding: 12px;
+    font-size: 1rem;
+    padding: 14px;
   }
 }
 
