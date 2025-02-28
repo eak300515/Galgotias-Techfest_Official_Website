@@ -13,11 +13,11 @@ const AboutGU = () => {
           <svg width="100%" height="100%">
             <defs>
               <linearGradient id="gradient" gradientTransform="rotate(90)">
-                <stop offset="0%" stop-color="#ff94c2" />
-                <stop offset="100%" stop-color="#741ede" />
+                <stop offset="0%" stopColor="#ff94c2" />
+                <stop offset="100%" stopColor="#741ede" />
               </linearGradient>
             </defs>
-            <text x="0" y="50%" fill="url(#gradient)" font-size="48px" font-weight="bold">
+            <text x="0" y="50%" fill="url(#gradient)" fontSize="48px" fontWeight="bold">
               About Galgotias
             </text>
           </svg>

@@ -65,17 +65,28 @@
   max-width: 50%;
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-abstract-overlay {
   position: relative;
   width: 100%;
-  height: 100%;
+  max-width: 400px;
+  height: auto;
   background: linear-gradient(135deg, #ff94c2 0%, #741ede 100%);
   border-radius: 20px;
   padding: 10px;
   transform: rotate(-4deg);
   box-shadow: 0 10px 40px rgba(116, 30, 222, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Effect */
+.image-abstract-overlay:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 20px 50px rgba(116, 30, 222, 0.6);
 }
 
 .about-image-gu {
@@ -92,11 +103,12 @@
   box-shadow: 0 20px 50px rgba(116, 30, 222, 0.6);
 }
 
-/* Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
   .about-section-gu {
     flex-direction: column;
     text-align: center;
+    padding: 40px 20px;
   }
 
   .about-image-container-gu {
@@ -110,5 +122,18 @@
   .image-abstract-overlay {
     transform: rotate(0deg);
     padding: 0;
+    max-width: 300px;
+  }
+
+  .about-title-gu text {
+    font-size: 36px !important;
+  }
+
+  .about-subtitle-gu {
+    font-size: 1.3rem;
+  }
+
+  .about-description-gu {
+    font-size: 1rem;
   }
 }
