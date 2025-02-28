@@ -1,22 +1,17 @@
 /* Section Background */
 .hero-two-bg {
   background-image: url('/src/assets/festlogo.png');
-  background-size: 300px; /* Medium size */
-  background-repeat: repeat-x; /* Horizontal scroll */
-  background-position: 0 0; /* Start position */
-  animation: marquee 20s linear infinite; /* Marquee animation */
+  background-size: 300px;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  animation: marquee 20s linear infinite;
   background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
   position: relative;
   overflow: hidden;
-}
-
-.particles canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* Ensure it's behind content */
 }
 
 /* Rotating Logo Section */
@@ -41,29 +36,10 @@
 }
 
 .loading-logo {
-  width: 80%; /* Adjust logo size */
+  width: 80%;
   height: auto;
-  border-radius: 50%; /* Ensure circular shape */
-  animation: rotate-logo 8s linear infinite reverse; /* Reverse rotation */
-}
-
-/* Rotation Animations */
-@keyframes rotate-frame {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-logo {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 50%;
+  animation: rotate-logo 8s linear infinite reverse;
 }
 
 /* Content Section */
@@ -84,11 +60,7 @@
   animation: slide-in 1.5s ease-in-out;
 }
 
-.hero-two-title .highlight {
-  color: #ffffff;
-  animation: pulse-highlight 2s infinite;
-}
-
+.hero-two-title .highlight,
 .hero-two-title .highlight-tech {
   color: #ffffff;
   animation: pulse-highlight 2s infinite;
@@ -109,62 +81,107 @@
   position: relative;
   z-index: 0;
   border-radius: 12px;
+  background: linear-gradient(45deg, #c715c4, #741ede);
+  box-shadow: 0 0 20px #c715c4, 0 0 40px #741ede;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Button Glow Effect */
-.btn::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #310435;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #c715c4, 0 0 50px #741ede;
 }
 
-.btn::before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #FF0000, #FF7300, #FFFB00, #48FF00,
-    #00FFD5, #002BFF, #FF00C8, #FF0000
-  );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 600%;
-  z-index: -1;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  filter: blur(8px);
-  animation: glowing 20s linear infinite;
-  border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-two-bg {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero-two-animation-wrapper {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .hero-two-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-two-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .hero-two-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
 }
 
-@keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
+@media (max-width: 768px) {
+  .hero-two-bg {
+    padding: 60px 20px;
+  }
+
+  .hero-two-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-two-content {
+    text-align: center;
+  }
+
+  .hero-two-buttons {
+    gap: 15px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
 }
 
-.btn:hover::before {
-  opacity: 1;
+@media (max-width: 480px) {
+  .hero-two-title {
+    font-size: 2rem;
+  }
+
+  .hero-two-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px;
+  }
 }
 
-.btn:active:after {
-  background: transparent;
+/* Animations */
+@keyframes rotate-frame {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.btn:active {
-  color: #000;
-  font-weight: bold;
+@keyframes rotate-logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Slide-in Animation */
 @keyframes slide-in {
   from {
     opacity: 0;
@@ -176,7 +193,6 @@
   }
 }
 
-/* Pulse Highlight */
 @keyframes pulse-highlight {
   0%, 100% {
     text-shadow: 0 0 10px rgba(255, 100, 200, 0.7), 0 0 20px rgba(166, 76, 255, 0.5);
@@ -186,12 +202,11 @@
   }
 }
 
-/* Marquee Animation */
 @keyframes marquee {
   from {
-    background-position: 0 0; /* Start from left */
+    background-position: 0 0;
   }
   to {
-    background-position: -100% 0; /* Scroll left */
+    background-position: -100% 0;
   }
 }

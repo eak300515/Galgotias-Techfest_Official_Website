@@ -19,7 +19,7 @@ const HeroTwo = () => {
   };
 
   return (
-    <section className="hero-two-bg min-h-screen flex items-center relative">
+    <section className="hero-two-bg min-h-screen flex items-center">
       {/* Rotating Logo Animation */}
       <div className="hero-two-animation-wrapper">
         <div className="hero-two-image">
@@ -32,10 +32,9 @@ const HeroTwo = () => {
       </div>
 
       {/* Content Section */}
-      <div className="hero-two-content relative z-10">
+      <div className="hero-two-content">
         <h1 className="hero-two-title">
-          Experience the <span className="highlight">Future of Innovation</span>{" "}
-          at
+          Experience the <span className="highlight">Future of Innovation</span> at
           <span className="highlight-tech"> Galgotias TechConclave 2025</span>
         </h1>
 
