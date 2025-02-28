@@ -6,10 +6,12 @@
   background-attachment: fixed;
   background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  text-align: center;
   min-height: 100vh;
+  padding: 60px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -22,7 +24,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  
   z-index: 1;
 }
 
@@ -32,7 +33,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: left;
+  text-align: center;
   animation: fadeIn 1.5s ease-in-out;
   position: relative;
   z-index: 2;
@@ -41,9 +42,8 @@
 .hero-title {
   font-family: "Fugaz One", serif;
   font-weight: 400;
-  font-style: normal;
   margin-bottom: 20px;
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.2;
   background: linear-gradient(90deg, #c715c4, #741ede);
   -webkit-background-clip: text;
@@ -52,16 +52,10 @@
   animation: glow 2s infinite alternate;
 }
 
-.hero-title .highlight {
-  color: #c715c4; /* Vibrant purple */
-  animation: pulse-highlight 2s infinite;
-}
-
 .hero-description {
   font-family: "Alegreya", serif;
-  font-optical-sizing: auto;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 20px;
   text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
@@ -73,18 +67,17 @@
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
+  text-align: left;
 }
 
 .hero-highlights li {
   font-family: "Alegreya", serif;
-  font-optical-sizing: auto;
-  font-weight: 500 ;
-  font-style: normal;
+  font-weight: 500;
   font-size: 1rem;
   color: #fff;
   margin: 10px 0;
   text-shadow: 0 0 10px rgba(116, 30, 222, 0.5);
-  padding-left: 15px;
+  padding-left: 20px;
   position: relative;
   animation: slideIn 1s ease-in-out;
 }
@@ -117,6 +110,58 @@
   box-shadow: 0 0 25px #c715c4, 0 0 50px #741ede;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-bg {
+    text-align: center;
+    background-attachment: scroll;
+    padding: 50px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-highlights {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .hero-highlights li {
+    font-size: 0.9rem;
+    padding-left: 20px;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
 /* Keyframes for animations */
 @keyframes fadeIn {
   from {
@@ -126,21 +171,6 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes pulse-highlight {
-  0%, 100% {
-    text-shadow: 
-      0 0 5px rgba(199, 21, 196, 0.6), 
-      0 0 15px rgba(116, 30, 222, 0.5), 
-      0 0 30px rgba(166, 76, 255, 0.4);
-  }
-  50% {
-    text-shadow: 
-      0 0 10px rgba(199, 21, 196, 0.7), 
-      0 0 20px rgba(116, 30, 222, 0.6), 
-      0 0 40px rgba(166, 76, 255, 0.5);
   }
 }
 

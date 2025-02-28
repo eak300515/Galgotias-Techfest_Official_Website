@@ -10,9 +10,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero-bg min-h-screen flex justify-between items-center px-8 lg:px-16">
+    <section className="hero-bg">
       {/* Left Side Content */}
-      <div className="hero-content text-white">
+      <div className="hero-content">
         <h1 className="hero-title">
           Galgotias Tech Conclave 2025
         </h1>
