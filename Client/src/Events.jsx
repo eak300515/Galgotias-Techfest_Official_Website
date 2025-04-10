@@ -3,7 +3,7 @@ import './Events.css';
 
 const events = [
   { title: 'Tech Exhibition', description: 'Dive into robotics, drones, machine learning, and deep tech projects.', image: "./src/assets/events/tech-exhibit.webp" },
-  { title: 'Guest Lectures', description: 'Learn from Aman Gupta, Narayan Murthy, Dr. Subramanian Swamy, and UNESCO figures.', image: "./src/assets/events/aman_guest.jpg"  },
+  { title: 'Guest Lectures', description: 'Learn from Aman Gupta, Narayan Murthy, Dr. Subramanian Swamy, and UNESCO figures.', image: "./src/assets/events/guess.jpg"  },
   { title: 'International Summit', description: 'Engage with global tech leaders like Sam Altman.', image: "./src/assets/events/summit.jpg"  },
   { title: 'Robotic Wars', description: 'Experience thrilling robotic battles.', image: "./src/assets/events/robo.jpg"  },
   { title: 'Esports Event', description: 'Compete or spectate in top gaming competitions.', image: "./src/assets/events/esports.jpg"  },
